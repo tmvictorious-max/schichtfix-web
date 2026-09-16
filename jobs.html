@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs bei Schichtfix — Helfer-Jobs für Lager, Produktion, Logistik & Bau</title>
+<meta name="description" content="Finde schnell einen fairen Job als Helfer in Lager, Produktion, Logistik oder Bau. Kostenlos für Bewerber, schnelle Vermittlung, faire Bezahlung. Jetzt in 60 Sekunden bewerben.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --em:#f5831f; --em-d:#d96f10; --em-l:rgba(245,131,31,.14);
+  --ink:#f3f7ff; --body:#c3d0e8; --muted:#8a9bbe;
+  --bg:#0f1c36; --bg2:#152442; --panel:#1b2c4e; --line:#2d3d60;
+  --btn-ink:#04140f; --cta:#f5831f; --cta-d:#d96f10; --cta-ink:#ffffff;
+  --shadow:0 18px 50px rgba(0,0,0,.42); --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,Segoe UI,sans-serif;color:var(--body);background:
+  radial-gradient(1100px 600px at 82% -12%, rgba(245,131,31,.10), transparent 60%),
+  radial-gradient(900px 600px at -8% 6%, rgba(56,110,220,.12), transparent 55%),
+  var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,.h{font-family:'Manrope',sans-serif;color:var(--ink);line-height:1.12;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.em{color:var(--em)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(10,17,34,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Manrope';font-weight:800;font-size:22px;color:var(--ink);letter-spacing:-.03em}
+.logo b{color:var(--em)}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-weight:500;font-size:15px;color:var(--body)}
+.navlinks a:hover{color:var(--em)}
+.navright{display:flex;align-items:center;gap:14px}
+.lang{display:flex;gap:2px;font-family:'Manrope';font-weight:700;font-size:12px;border:1px solid var(--line);border-radius:100px;padding:3px;background:var(--panel)}
+.lang a{padding:4px 9px;border-radius:100px;color:var(--muted);cursor:pointer}
+.lang a.on{background:var(--em);color:var(--btn-ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Manrope';font-weight:700;font-size:15px;padding:12px 22px;border-radius:100px;cursor:pointer;border:none;transition:.2s;white-space:nowrap}
+.btn-primary{background:var(--cta);color:var(--cta-ink);box-shadow:0 10px 26px rgba(245,131,31,.34)}
+.btn-primary:hover{background:var(--cta-d);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--em);color:var(--em)}
+@media(max-width:860px){.navlinks{display:none}}
+
+.hero{padding:66px 0 54px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--em);box-shadow:var(--shadow);margin-bottom:22px}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--em);box-shadow:0 0 0 4px rgba(245,131,31,.20)}
+.hero h1{font-size:clamp(36px,5.4vw,58px);font-weight:800;margin-bottom:18px}
+.hero p.lead{font-size:clamp(17px,2vw,20px);max-width:540px;margin-bottom:26px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.hero-cta .btn{padding:15px 28px;font-size:16px}
+.trustline{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:600;color:var(--muted)}
+.trustline span{display:flex;align-items:center;gap:7px}
+.trustline .ic{color:var(--em)}
+
+.hero-card{background:linear-gradient(180deg,var(--panel),#142440);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:var(--em-l);border-radius:50%}
+.hero-card h3{font-size:19px;font-weight:800;margin-bottom:4px;position:relative}
+.hero-card .sub{font-size:13.5px;color:var(--muted);margin-bottom:18px;position:relative}
+.hc-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);position:relative}
+.hc-row:last-child{border-bottom:none}
+.hc-ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--em-l);color:var(--em);display:flex;align-items:center;justify-content:center;font-size:20px}
+.hc-row b{color:var(--ink);font-family:'Manrope';font-weight:700;display:block;font-size:15px}
+.hc-row span{font-size:13px;color:var(--muted)}
+
+section.blk{padding:70px 0}
+.sec-head{text-align:center;max-width:660px;margin:0 auto 46px}
+.kick{font-family:'Manrope';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--em);margin-bottom:12px}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin-bottom:12px}
+.sec-head p{font-size:17px;color:var(--muted)}
+
+.bg-soft{background:var(--bg2)}
+.bene{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.bene{grid-template-columns:1fr}}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;gap:18px;align-items:flex-start}
+.bcard .ic{flex:none;width:50px;height:50px;border-radius:14px;background:var(--em-l);color:var(--em);display:flex;align-items:center;justify-content:center;font-size:24px}
+.bcard h3{font-size:18px;font-weight:700;margin-bottom:6px}
+.bcard p{font-size:14.5px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+.step .num{font-family:'Manrope';font-weight:800;font-size:15px;width:40px;height:40px;border-radius:12px;background:var(--em);color:var(--btn-ink);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.step p{font-size:15px}
+
+.inds{display:grid;grid-template-columns:repeat(auto-fit,minmax(188px,1fr));gap:16px}
+@media(max-width:820px){.inds{grid-template-columns:repeat(2,1fr)}}
+.ind{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;text-align:center;transition:.2s}
+.ind:hover{border-color:var(--em);transform:translateY(-3px);box-shadow:var(--shadow)}
+.ind .ic{font-size:32px;margin-bottom:12px}
+.ind b{font-family:'Manrope';color:var(--ink);font-size:16px;display:block;margin-bottom:4px}
+.ind span{font-size:13px;color:var(--muted)}
+
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:860px){.cta-grid{grid-template-columns:1fr;gap:30px}}
+.cta-left h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
+.cta-left p{font-size:17px;margin-bottom:24px}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.contact-item .ic{width:46px;height:46px;border-radius:12px;background:var(--em-l);color:var(--em);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
+.contact-item b{color:var(--ink);font-family:'Manrope';display:block;font-size:15px}
+.contact-item span{font-size:13.5px;color:var(--muted)}
+form.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+form .f{margin-bottom:15px}
+form label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+form input,form select,form textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;font-family:inherit;color:var(--ink);background:var(--bg2);transition:.15s}
+form input::placeholder,form textarea::placeholder{color:#5f708f}
+form select option{background:#0d1730;color:var(--ink)}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px rgba(245,131,31,.16)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){form .row{grid-template-columns:1fr}}
+form button{width:100%;margin-top:6px;padding:15px;font-size:16px}
+.form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.chk{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;color:var(--muted);cursor:pointer;line-height:1.45;margin:4px 0 2px}
+.chk input{width:auto;margin-top:2px;accent-color:var(--em);flex:none}
+.chk a{color:var(--em);text-decoration:underline}
+
+footer{background:#0a1428;color:var(--muted);padding:52px 0 28px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:24px}}
+footer .logo{color:var(--ink);margin-bottom:12px}
+footer p.tag{font-size:14px;color:var(--muted);max-width:300px}
+footer h4{font-family:'Manrope';color:var(--ink);font-size:14px;margin-bottom:14px;font-weight:700}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer ul a{font-size:14px;color:var(--muted);cursor:pointer}
+footer ul a:hover{color:var(--em)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:22px;font-size:13px;color:#66789b}
+
+.mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--panel);border-top:1px solid var(--line);padding:12px 16px;box-shadow:0 -6px 24px rgba(0,0,0,.3)}
+.mobile-cta .btn{width:100%;justify-content:center;padding:15px}
+@media(max-width:860px){.mobile-cta{display:block}body{padding-bottom:76px}}
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:70;max-width:560px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px 20px;display:none}
+.cookie.show{display:block}
+.cookie p{font-size:13.5px;color:var(--body);margin-bottom:12px;line-height:1.5}
+.cookie p a{color:var(--em);text-decoration:underline}
+.cookie .crow{display:flex;gap:10px;flex-wrap:wrap}
+.cookie .crow .btn{padding:10px 18px;font-size:14px}
+@media(max-width:860px){.cookie{bottom:86px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo">Schicht<b>fix</b></a>
+    <nav class="navlinks">
+      <a href="#vorteile" data-i18n="nav_why">Deine Vorteile</a>
+      <a href="#ablauf" data-i18n="nav_how">Ablauf</a>
+      <a href="#jobs" data-i18n="nav_ind">Job-Bereiche</a>
+      <a href="/" data-i18n="nav_employer">Für Betriebe</a>
+    </nav>
+    <div class="navright">
+      <div class="lang">
+        <a data-l="de" class="on" onclick="setLang('de');return false">DE</a>
+        <a data-l="en" onclick="setLang('en');return false">EN</a>
+        <a data-l="ru" onclick="setLang('ru');return false">RU</a>
+        <a data-l="uk" onclick="setLang('uk');return false">UA</a>
+        <a data-l="ro" onclick="setLang('ro');return false">RO</a>
+      </div>
+      <a href="#bewerben" class="btn btn-primary" data-i18n="cta_apply">Jetzt bewerben</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span><span data-i18n="hero_badge">Kostenlos für Bewerber · schnelle Vermittlung</span></div>
+      <h1 data-i18n="hero_h1">Finde deinen Job — <span class="em">schnell &amp; fair.</span></h1>
+      <p class="lead" data-i18n="hero_lead">Helfer-Jobs in Lager, Produktion, Logistik und Bau. Wir vermitteln dich schnell an geprüfte Betriebe — kostenlos für dich.</p>
+      <div class="hero-cta">
+        <a href="#bewerben" class="btn btn-primary"><span data-i18n="cta_apply">Jetzt bewerben</span> →</a>
+        <a href="#ablauf" class="btn btn-ghost" data-i18n="hero_cta2">So läuft's ab</a>
+      </div>
+      <div class="trustline">
+        <span><span class="ic">✓</span> <span data-i18n="trust1">100% kostenlos</span></span>
+        <span><span class="ic">✓</span> <span data-i18n="trust2">Faire Bezahlung</span></span>
+        <span><span class="ic">✓</span> <span data-i18n="trust3">Schneller Start</span></span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3 data-i18n="hc_title">Bewerbung in 60 Sekunden</h3>
+      <p class="sub" data-i18n="hc_sub">Kein Lebenslauf nötig. Einfach Formular ausfüllen.</p>
+      <div class="hc-row"><div class="hc-ic">📝</div><div><b data-i18n="hc1_b">1. Formular ausfüllen</b><span data-i18n="hc1_s">Name, Kontakt, was du machen willst</span></div></div>
+      <div class="hc-row"><div class="hc-ic">📞</div><div><b data-i18n="hc2_b">2. Wir melden uns</b><span data-i18n="hc2_s">Wir finden den passenden Job für dich</span></div></div>
+      <div class="hc-row"><div class="hc-ic">🚀</div><div><b data-i18n="hc3_b">3. Du startest</b><span data-i18n="hc3_s">Schneller Einstieg, faire Bezahlung</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk bg-soft" id="vorteile">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick" data-i18n="why_kick">Deine Vorteile</div>
+      <h2 data-i18n="why_h2">Warum über Schichtfix arbeiten</h2>
+    </div>
+    <div class="bene">
+      <div class="bcard"><div class="ic">🆓</div><div><h3 data-i18n="b1_h">Kostenlos für dich</h3><p data-i18n="b1_p">Für Bewerber immer kostenlos. Du zahlst nichts — nie.</p></div></div>
+      <div class="bcard"><div class="ic">⚡</div><div><h3 data-i18n="b2_h">Schneller Start</h3><p data-i18n="b2_p">Oft geht es innerhalb weniger Tage los. Keine lange Suche.</p></div></div>
+      <div class="bcard"><div class="ic">💶</div><div><h3 data-i18n="b3_h">Faire Bezahlung</h3><p data-i18n="b3_p">Klare Konditionen und pünktliche Bezahlung bei seriösen Betrieben.</p></div></div>
+      <div class="bcard"><div class="ic">🤝</div><div><h3 data-i18n="b4_h">Persönliche Betreuung</h3><p data-i18n="b4_p">Ein fester Ansprechpartner begleitet dich — auf Deutsch, Englisch oder Russisch.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="ablauf">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick" data-i18n="how_kick">Ablauf</div>
+      <h2 data-i18n="how_h2">In drei Schritten zum Job</h2>
+      <p data-i18n="how_p">Kein Papierkram, kein Aufwand. Du bewirbst dich — wir kümmern uns um den Rest.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3 data-i18n="step1_h">Bewerben</h3><p data-i18n="step1_p">Fülle das kurze Formular aus — Name, Kontakt, welcher Bereich dich interessiert und wo du wohnst.</p></div>
+      <div class="step"><div class="num">2</div><h3 data-i18n="step2_h">Wir melden uns</h3><p data-i18n="step2_p">Wir schauen, welcher Job zu dir passt, und rufen dich an oder schreiben dir.</p></div>
+      <div class="step"><div class="num">3</div><h3 data-i18n="step3_h">Du startest</h3><p data-i18n="step3_p">Passt alles, geht es schnell los — bei einem geprüften Betrieb in deiner Nähe.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk bg-soft" id="jobs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick" data-i18n="ind_kick">Job-Bereiche</div>
+      <h2 data-i18n="ind_h2">Diese Jobs vermitteln wir</h2>
+    </div>
+    <div class="inds">
+      <div class="ind"><div class="ic">📦</div><b data-i18n="i1_b">Lager &amp; Logistik</b><span data-i18n="i1_s">Kommissionierung, Verladung</span></div>
+      <div class="ind"><div class="ic">🏭</div><b data-i18n="i2_b">Produktion &amp; Montage</b><span data-i18n="i2_s">Fließband, Fertigung</span></div>
+      <div class="ind"><div class="ic">📮</div><b data-i18n="i3_b">Verpackung</b><span data-i18n="i3_s">Verpacken, Etikettieren</span></div>
+      <div class="ind"><div class="ic">🚚</div><b data-i18n="i4_b">Umzug &amp; Event</b><span data-i18n="i4_s">Auf- und Abbau, Transport</span></div>
+      <div class="ind"><div class="ic">🏗️</div><b data-i18n="i5_b">Bau &amp; Handwerk</b><span data-i18n="i5_s">Bauhelfer, Renovierung</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="bewerben">
+  <div class="wrap cta-grid">
+    <div class="cta-left">
+      <div class="kick" data-i18n="f_kick">Bewerbung</div>
+      <h2 data-i18n="f_h2">Jetzt in 60 Sekunden bewerben</h2>
+      <p data-i18n="f_p">Kein Lebenslauf nötig. Fülle einfach das Formular aus — wir melden uns bei dir. Kostenlos und unverbindlich.</p>
+      <div class="contact-item"><div class="ic">✉️</div><div><b>E-Mail</b><span>schichtfix@gmail.com</span></div></div>
+      <div class="contact-item"><div class="ic">💬</div><div><b>WhatsApp</b><span data-i18n="c_wa">Schnellste Antwort</span></div></div>
+      <div class="contact-item"><div class="ic">🌍</div><div><b data-i18n="c_lang_b">Sprache</b><span data-i18n="c_lang_s">DE · EN · RU</span></div></div>
+    </div>
+    <form class="card" onsubmit="return sendForm(event)">
+      <div class="f"><label data-i18n="form_name">Name</label><input name="name" required></div>
+      <div class="row">
+        <div class="f"><label data-i18n="form_tel">Telefon</label><input name="tel" required></div>
+        <div class="f"><label>E-Mail</label><input type="email" name="email"></div>
+      </div>
+      <div class="row">
+        <div class="f"><label data-i18n="form_bereich">Bereich</label>
+          <select name="bereich">
+            <option data-i18n="opt1">Lager &amp; Logistik</option>
+            <option data-i18n="opt2">Produktion &amp; Montage</option>
+            <option data-i18n="opt3">Verpackung</option>
+            <option data-i18n="opt4">Umzug &amp; Event</option>
+            <option data-i18n="opt5">Bau &amp; Handwerk</option>
+            <option data-i18n="opt6">Egal / alles</option>
+          </select></div>
+        <div class="f"><label data-i18n="form_ort">Ort / PLZ</label><input name="ort" placeholder="45889"></div>
+      </div>
+      <div class="f"><label data-i18n="form_ab">Ab wann verfügbar?</label><input name="ab" data-i18n-ph="ph_ab" placeholder="z. B. sofort"></div>
+      <label class="chk"><input type="checkbox" name="consent" required> <span data-i18n="form_consent">Ich habe die <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span></label>
+      <button type="submit" class="btn btn-primary"><span data-i18n="cta_apply">Jetzt bewerben</span> →</button>
+      <div class="form-note" data-i18n="form_note">Absenden öffnet dein E-Mail-Programm mit vorausgefüllter Bewerbung.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Schicht<b style="color:var(--em)">fix</b></div>
+        <p class="tag" data-i18n="foot_tag">Deine Schicht — fix besetzt. Helfer-Jobs in Lager, Produktion, Logistik und Bau.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_nav">Navigation</h4>
+        <ul>
+          <li><a href="#vorteile" data-i18n="nav_why">Deine Vorteile</a></li>
+          <li><a href="#ablauf" data-i18n="nav_how">Ablauf</a></li>
+          <li><a href="#bewerben" data-i18n="cta_apply">Jetzt bewerben</a></li>
+          <li><a href="/" data-i18n="nav_employer">Für Betriebe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot_legal">Rechtliches</h4>
+        <ul>
+          <li><a href="/impressum.html" data-i18n="leg_imp">Impressum</a></li>
+          <li><a href="/datenschutz.html" data-i18n="leg_priv">Datenschutz</a></li>
+          <li><a href="#" data-i18n="leg_agb">AGB</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Schichtfix · by Maslova Business International</span>
+      <span data-i18n="hero_badge">Kostenlos für Bewerber · schnelle Vermittlung</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="#bewerben" class="btn btn-primary"><span data-i18n="cta_apply">Jetzt bewerben</span> →</a></div>
+
+<div class="cookie" id="cookie">
+  <p><span data-i18n="cookie_text">Wir verwenden nur technisch notwendige Cookies. Optionale Cookies (z. B. Statistik) nur mit Ihrer Zustimmung.</span> <a href="/datenschutz.html" data-i18n="cookie_link">Datenschutz</a></p>
+  <div class="crow">
+    <button class="btn btn-primary" onclick="cookieChoice('accepted')"><span data-i18n="cookie_accept">Akzeptieren</span></button>
+    <button class="btn btn-ghost" onclick="cookieChoice('necessary')"><span data-i18n="cookie_decline">Nur notwendige</span></button>
+  </div>
+</div>
+
+<script>
+const I18N={
+  de:{
+    nav_why:"Deine Vorteile",nav_how:"Ablauf",nav_ind:"Job-Bereiche",nav_employer:"Für Betriebe",
+    cta_apply:"Jetzt bewerben",hero_badge:"Kostenlos für Bewerber · schnelle Vermittlung",
+    hero_h1:"Finde deinen Job — <span class='em'>schnell &amp; fair.</span>",
+    hero_lead:"Helfer-Jobs in Lager, Produktion, Logistik und Bau. Wir vermitteln dich schnell an geprüfte Betriebe — kostenlos für dich.",
+    hero_cta2:"So läuft's ab",trust1:"100% kostenlos",trust2:"Faire Bezahlung",trust3:"Schneller Start",
+    hc_title:"Bewerbung in 60 Sekunden",hc_sub:"Kein Lebenslauf nötig. Einfach Formular ausfüllen.",
+    hc1_b:"1. Formular ausfüllen",hc1_s:"Name, Kontakt, was du machen willst",hc2_b:"2. Wir melden uns",hc2_s:"Wir finden den passenden Job für dich",hc3_b:"3. Du startest",hc3_s:"Schneller Einstieg, faire Bezahlung",
+    why_kick:"Deine Vorteile",why_h2:"Warum über Schichtfix arbeiten",
+    b1_h:"Kostenlos für dich",b1_p:"Für Bewerber immer kostenlos. Du zahlst nichts — nie.",
+    b2_h:"Schneller Start",b2_p:"Oft geht es innerhalb weniger Tage los. Keine lange Suche.",
+    b3_h:"Faire Bezahlung",b3_p:"Klare Konditionen und pünktliche Bezahlung bei seriösen Betrieben.",
+    b4_h:"Persönliche Betreuung",b4_p:"Ein fester Ansprechpartner begleitet dich — auf Deutsch, Englisch oder Russisch.",
+    how_kick:"Ablauf",how_h2:"In drei Schritten zum Job",how_p:"Kein Papierkram, kein Aufwand. Du bewirbst dich — wir kümmern uns um den Rest.",
+    step1_h:"Bewerben",step1_p:"Fülle das kurze Formular aus — Name, Kontakt, welcher Bereich dich interessiert und wo du wohnst.",
+    step2_h:"Wir melden uns",step2_p:"Wir schauen, welcher Job zu dir passt, und rufen dich an oder schreiben dir.",
+    step3_h:"Du startest",step3_p:"Passt alles, geht es schnell los — bei einem geprüften Betrieb in deiner Nähe.",
+    ind_kick:"Job-Bereiche",ind_h2:"Diese Jobs vermitteln wir",
+    i1_b:"Lager &amp; Logistik",i1_s:"Kommissionierung, Verladung",i2_b:"Produktion &amp; Montage",i2_s:"Fließband, Fertigung",i3_b:"Verpackung",i3_s:"Verpacken, Etikettieren",i4_b:"Umzug &amp; Event",i4_s:"Auf- und Abbau, Transport",i5_b:"Bau &amp; Handwerk",i5_s:"Bauhelfer, Renovierung",
+    f_kick:"Bewerbung",f_h2:"Jetzt in 60 Sekunden bewerben",f_p:"Kein Lebenslauf nötig. Fülle einfach das Formular aus — wir melden uns bei dir. Kostenlos und unverbindlich.",
+    c_wa:"Schnellste Antwort",c_lang_b:"Sprache",c_lang_s:"DE · EN · RU",
+    form_name:"Name",form_tel:"Telefon",form_bereich:"Bereich",form_ort:"Ort / PLZ",form_ab:"Ab wann verfügbar?",ph_ab:"z. B. sofort",form_note:"Absenden öffnet dein E-Mail-Programm mit vorausgefüllter Bewerbung.",form_consent:"Ich habe die <a href='/datenschutz.html' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+    opt1:"Lager &amp; Logistik",opt2:"Produktion &amp; Montage",opt3:"Verpackung",opt4:"Umzug &amp; Event",opt5:"Bau &amp; Handwerk",opt6:"Egal / alles",
+    foot_tag:"Deine Schicht — fix besetzt. Helfer-Jobs in Lager, Produktion, Logistik und Bau.",foot_nav:"Navigation",foot_legal:"Rechtliches",leg_imp:"Impressum",leg_priv:"Datenschutz",leg_agb:"AGB",cookie_text:"Wir verwenden nur technisch notwendige Cookies. Optionale Cookies (z. B. Statistik) nur mit Ihrer Zustimmung.",cookie_link:"Datenschutz",cookie_accept:"Akzeptieren",cookie_decline:"Nur notwendige"
+  },
+  en:{
+    nav_why:"Your benefits",nav_how:"How it works",nav_ind:"Job areas",nav_employer:"For employers",
+    cta_apply:"Apply now",hero_badge:"Free for applicants · fast placement",
+    hero_h1:"Find your job — <span class='em'>fast &amp; fair.</span>",
+    hero_lead:"Helper jobs in warehouse, production, logistics and construction. We place you fast with vetted employers — free for you.",
+    hero_cta2:"How it works",trust1:"100% free",trust2:"Fair pay",trust3:"Fast start",
+    hc_title:"Apply in 60 seconds",hc_sub:"No CV needed. Just fill in the form.",
+    hc1_b:"1. Fill in the form",hc1_s:"Name, contact, what you want to do",hc2_b:"2. We get back to you",hc2_s:"We find the right job for you",hc3_b:"3. You start",hc3_s:"Fast start, fair pay",
+    why_kick:"Your benefits",why_h2:"Why work through Schichtfix",
+    b1_h:"Free for you",b1_p:"Always free for applicants. You never pay anything.",
+    b2_h:"Fast start",b2_p:"Often you start within a few days. No long search.",
+    b3_h:"Fair pay",b3_p:"Clear terms and on-time pay with reputable employers.",
+    b4_h:"Personal support",b4_p:"A dedicated contact supports you — in German, English or Russian.",
+    how_kick:"How it works",how_h2:"Three steps to your job",how_p:"No paperwork, no hassle. You apply — we handle the rest.",
+    step1_h:"Apply",step1_p:"Fill in the short form — name, contact, which area interests you and where you live.",
+    step2_h:"We get back to you",step2_p:"We check which job fits you and call or message you.",
+    step3_h:"You start",step3_p:"If it fits, you start fast — at a vetted employer near you.",
+    ind_kick:"Job areas",ind_h2:"The jobs we place",
+    i1_b:"Warehouse &amp; Logistics",i1_s:"Picking, loading",i2_b:"Production &amp; Assembly",i2_s:"Assembly line, manufacturing",i3_b:"Packaging",i3_s:"Packing, labelling",i4_b:"Moving &amp; Events",i4_s:"Setup, teardown, transport",i5_b:"Construction &amp; Trades",i5_s:"Construction helpers, renovation",
+    f_kick:"Application",f_h2:"Apply now in 60 seconds",f_p:"No CV needed. Just fill in the form — we'll get back to you. Free and non-binding.",
+    c_wa:"Fastest response",c_lang_b:"Language",c_lang_s:"DE · EN · RU",
+    form_name:"Name",form_tel:"Phone",form_bereich:"Area",form_ort:"Town / ZIP",form_ab:"Available from?",ph_ab:"e.g. immediately",form_note:"Submitting opens your email app with a pre-filled application.",form_consent:"I have read the <a href='/datenschutz.html' target='_blank'>privacy policy</a> and consent to the processing of my data.",
+    opt1:"Warehouse &amp; Logistics",opt2:"Production &amp; Assembly",opt3:"Packaging",opt4:"Moving &amp; Events",opt5:"Construction &amp; Trades",opt6:"Any / all",
+    foot_tag:"Your shift — filled fast. Helper jobs in warehouse, production, logistics and construction.",foot_nav:"Navigation",foot_legal:"Legal",leg_imp:"Imprint",leg_priv:"Privacy",leg_agb:"Terms",cookie_text:"We use only technically necessary cookies. Optional cookies (e.g. statistics) only with your consent.",cookie_link:"Privacy",cookie_accept:"Accept",cookie_decline:"Only necessary"
+  },
+  ru:{
+    nav_why:"Твои плюсы",nav_how:"Как это работает",nav_ind:"Направления",nav_employer:"Для компаний",
+    cta_apply:"Откликнуться",hero_badge:"Для соискателей бесплатно · быстрый подбор",
+    hero_h1:"Найди работу — <span class='em'>быстро и честно.</span>",
+    hero_lead:"Работа помощником на складе, производстве, в логистике и на стройке. Быстро устроим тебя в проверенные компании — для тебя бесплатно.",
+    hero_cta2:"Как это работает",trust1:"100% бесплатно",trust2:"Честная оплата",trust3:"Быстрый старт",
+    hc_title:"Отклик за 60 секунд",hc_sub:"Резюме не нужно. Просто заполни форму.",
+    hc1_b:"1. Заполни форму",hc1_s:"Имя, контакт, чем хочешь заниматься",hc2_b:"2. Мы свяжемся",hc2_s:"Подберём подходящую работу для тебя",hc3_b:"3. Ты выходишь",hc3_s:"Быстрый старт, честная оплата",
+    why_kick:"Твои плюсы",why_h2:"Почему работать через Schichtfix",
+    b1_h:"Для тебя бесплатно",b1_p:"Для соискателей всегда бесплатно. Ты не платишь ничего — никогда.",
+    b2_h:"Быстрый старт",b2_p:"Часто выход уже через несколько дней. Без долгих поисков.",
+    b3_h:"Честная оплата",b3_p:"Чёткие условия и оплата вовремя у надёжных компаний.",
+    b4_h:"Личное сопровождение",b4_p:"С тобой работает личный менеджер — на немецком, английском или русском.",
+    how_kick:"Как это работает",how_h2:"Три шага до работы",how_p:"Без бумаг и хлопот. Ты откликаешься — остальное берём на себя.",
+    step1_h:"Отклик",step1_p:"Заполни короткую форму — имя, контакт, какое направление интересно и где живёшь.",
+    step2_h:"Мы свяжемся",step2_p:"Посмотрим, какая работа тебе подходит, и позвоним или напишем.",
+    step3_h:"Ты выходишь",step3_p:"Если всё подходит — быстрый выход в проверенную компанию рядом с тобой.",
+    ind_kick:"Направления",ind_h2:"Какую работу подбираем",
+    i1_b:"Склад и логистика",i1_s:"Комплектация, погрузка",i2_b:"Производство и сборка",i2_s:"Конвейер, изготовление",i3_b:"Упаковка",i3_s:"Упаковка, маркировка",i4_b:"Переезды и мероприятия",i4_s:"Монтаж, демонтаж, транспорт",i5_b:"Стройка и ремонт",i5_s:"Разнорабочие, ремонт",
+    f_kick:"Отклик",f_h2:"Откликнись за 60 секунд",f_p:"Резюме не нужно. Просто заполни форму — мы свяжемся с тобой. Бесплатно и ни к чему не обязывает.",
+    c_wa:"Самый быстрый ответ",c_lang_b:"Язык",c_lang_s:"DE · EN · RU",
+    form_name:"Имя",form_tel:"Телефон",form_bereich:"Направление",form_ort:"Город / индекс",form_ab:"С какого дня готов(а)?",ph_ab:"напр. сразу",form_note:"Отправка откроет твой почтовый клиент с заполненным откликом.",form_consent:"Я прочитал(а) <a href='/datenschutz.html' target='_blank'>политику конфиденциальности</a> и согласен(на) на обработку моих данных.",
+    opt1:"Склад и логистика",opt2:"Производство и сборка",opt3:"Упаковка",opt4:"Переезды и мероприятия",opt5:"Стройка и ремонт",opt6:"Не важно / любое",
+    foot_tag:"Твоя смена — закрыта быстро. Работа помощником на складе, производстве, в логистике и на стройке.",foot_nav:"Навигация",foot_legal:"Правовое",leg_imp:"Импрессум",leg_priv:"Конфиденциальность",leg_agb:"Условия",cookie_text:"Мы используем только технически необходимые cookie. Опциональные (напр. статистика) — только с вашего согласия.",cookie_link:"Конфиденциальность",cookie_accept:"Принять",cookie_decline:"Только необходимые"
+  },
+  uk:{
+    nav_why:"Твої переваги",nav_how:"Як це працює",nav_ind:"Напрями",nav_employer:"Для компаній",
+    cta_apply:"Відгукнутися",hero_badge:"Для кандидатів безкоштовно · швидкий підбір",
+    hero_h1:"Знайди роботу — <span class='em'>швидко та чесно.</span>",
+    hero_lead:"Робота помічником на складі, виробництві, у логістиці та на будівництві. Швидко влаштуємо тебе в перевірені компанії — для тебе безкоштовно.",
+    hero_cta2:"Як це працює",trust1:"100% безкоштовно",trust2:"Чесна оплата",trust3:"Швидкий старт",
+    hc_title:"Відгук за 60 секунд",hc_sub:"Резюме не потрібне. Просто заповни форму.",
+    hc1_b:"1. Заповни форму",hc1_s:"Ім'я, контакт, чим хочеш займатися",hc2_b:"2. Ми зв'яжемося",hc2_s:"Підберемо підходящу роботу для тебе",hc3_b:"3. Ти виходиш",hc3_s:"Швидкий старт, чесна оплата",
+    why_kick:"Твої переваги",why_h2:"Чому працювати через Schichtfix",
+    b1_h:"Для тебе безкоштовно",b1_p:"Для кандидатів завжди безкоштовно. Ти не платиш нічого — ніколи.",
+    b2_h:"Швидкий старт",b2_p:"Часто вихід уже за кілька днів. Без довгих пошуків.",
+    b3_h:"Чесна оплата",b3_p:"Чіткі умови й оплата вчасно у надійних компаніях.",
+    b4_h:"Особистий супровід",b4_p:"З тобою працює особистий менеджер — німецькою, англійською, російською або українською.",
+    how_kick:"Як це працює",how_h2:"Три кроки до роботи",how_p:"Без паперів і клопоту. Ти відгукуєшся — решту беремо на себе.",
+    step1_h:"Відгук",step1_p:"Заповни коротку форму — ім'я, контакт, який напрям цікавий і де живеш.",
+    step2_h:"Ми зв'яжемося",step2_p:"Подивимося, яка робота тобі підходить, і зателефонуємо або напишемо.",
+    step3_h:"Ти виходиш",step3_p:"Якщо все підходить — швидкий вихід у перевірену компанію поруч із тобою.",
+    ind_kick:"Напрями",ind_h2:"Яку роботу підбираємо",
+    i1_b:"Склад і логістика",i1_s:"Комплектація, навантаження",i2_b:"Виробництво і збірка",i2_s:"Конвеєр, виготовлення",i3_b:"Пакування",i3_s:"Пакування, маркування",i4_b:"Переїзди і заходи",i4_s:"Монтаж, демонтаж, транспорт",i5_b:"Будівництво і ремонт",i5_s:"Різнороби, ремонт",
+    f_kick:"Відгук",f_h2:"Відгукнись за 60 секунд",f_p:"Резюме не потрібне. Просто заповни форму — ми зв'яжемося з тобою. Безкоштовно й ні до чого не зобов'язує.",
+    c_wa:"Найшвидша відповідь",c_lang_b:"Мова",c_lang_s:"DE · EN · RU · UA",
+    form_name:"Ім'я",form_tel:"Телефон",form_bereich:"Напрям",form_ort:"Місто / індекс",form_ab:"З якого дня готовий(-а)?",ph_ab:"напр. одразу",form_note:"Надсилання відкриє твій поштовий клієнт із заповненим відгуком.",form_consent:"Я прочитав(-ла) <a href='/datenschutz.html' target='_blank'>політику конфіденційності</a> та погоджуюся на обробку моїх даних.",
+    opt1:"Склад і логістика",opt2:"Виробництво і збірка",opt3:"Пакування",opt4:"Переїзди і заходи",opt5:"Будівництво і ремонт",opt6:"Не важливо / будь-яке",
+    foot_tag:"Твоя зміна — закрита швидко. Робота помічником на складі, виробництві, у логістиці та на будівництві.",foot_nav:"Навігація",foot_legal:"Правове",leg_imp:"Імпресум",leg_priv:"Конфіденційність",leg_agb:"Умови",cookie_text:"Ми використовуємо лише технічно необхідні cookie. Опціональні (напр. статистика) — лише за вашою згодою.",cookie_link:"Конфіденційність",cookie_accept:"Прийняти",cookie_decline:"Лише необхідні"
+  },
+  ro:{
+    nav_why:"Avantajele tale",nav_how:"Cum funcționează",nav_ind:"Domenii",nav_employer:"Pentru firme",
+    cta_apply:"Aplică acum",hero_badge:"Gratuit pentru candidați · plasare rapidă",
+    hero_h1:"Găsește-ți jobul — <span class='em'>rapid și corect.</span>",
+    hero_lead:"Joburi de ajutor în depozit, producție, logistică și construcții. Te plasăm rapid la firme verificate — gratuit pentru tine.",
+    hero_cta2:"Cum funcționează",trust1:"100% gratuit",trust2:"Plată corectă",trust3:"Start rapid",
+    hc_title:"Aplici în 60 de secunde",hc_sub:"Fără CV. Doar completezi formularul.",
+    hc1_b:"1. Completează formularul",hc1_s:"Nume, contact, ce vrei să faci",hc2_b:"2. Te contactăm",hc2_s:"Găsim jobul potrivit pentru tine",hc3_b:"3. Începi",hc3_s:"Start rapid, plată corectă",
+    why_kick:"Avantajele tale",why_h2:"De ce să lucrezi prin Schichtfix",
+    b1_h:"Gratuit pentru tine",b1_p:"Mereu gratuit pentru candidați. Nu plătești nimic — niciodată.",
+    b2_h:"Start rapid",b2_p:"Deseori începi în câteva zile. Fără căutări lungi.",
+    b3_h:"Plată corectă",b3_p:"Condiții clare și plată la timp la firme serioase.",
+    b4_h:"Sprijin personal",b4_p:"O persoană de contact dedicată te însoțește — în germană, engleză sau rusă.",
+    how_kick:"Cum funcționează",how_h2:"Trei pași până la job",how_p:"Fără hârtii, fără bătăi de cap. Tu aplici — noi ne ocupăm de rest.",
+    step1_h:"Aplici",step1_p:"Completează formularul scurt — nume, contact, ce domeniu te interesează și unde locuiești.",
+    step2_h:"Te contactăm",step2_p:"Vedem ce job ți se potrivește și te sunăm sau îți scriem.",
+    step3_h:"Începi",step3_p:"Dacă totul se potrivește, începi rapid — la o firmă verificată din apropierea ta.",
+    ind_kick:"Domenii",ind_h2:"Joburile pe care le plasăm",
+    i1_b:"Depozit &amp; Logistică",i1_s:"Pregătire comenzi, încărcare",i2_b:"Producție &amp; Montaj",i2_s:"Bandă, fabricație",i3_b:"Ambalare",i3_s:"Ambalare, etichetare",i4_b:"Mutări &amp; Evenimente",i4_s:"Montaj, demontaj, transport",i5_b:"Construcții &amp; Meserii",i5_s:"Muncitori necalificați, renovări",
+    f_kick:"Aplicație",f_h2:"Aplică acum în 60 de secunde",f_p:"Fără CV. Doar completezi formularul — te contactăm noi. Gratuit și fără obligații.",
+    c_wa:"Cel mai rapid răspuns",c_lang_b:"Limbă",c_lang_s:"DE · EN · RU",
+    form_name:"Nume",form_tel:"Telefon",form_bereich:"Domeniu",form_ort:"Oraș / cod poștal",form_ab:"Disponibil de când?",ph_ab:"ex. imediat",form_note:"Trimiterea deschide aplicația ta de e-mail cu aplicația precompletată.",form_consent:"Am citit <a href='/datenschutz.html' target='_blank'>politica de confidențialitate</a> și sunt de acord cu prelucrarea datelor mele.",
+    opt1:"Depozit &amp; Logistică",opt2:"Producție &amp; Montaj",opt3:"Ambalare",opt4:"Mutări &amp; Evenimente",opt5:"Construcții &amp; Meserii",opt6:"Oricare / orice",
+    foot_tag:"Tura ta — ocupată rapid. Joburi de ajutor în depozit, producție, logistică și construcții.",foot_nav:"Navigare",foot_legal:"Legal",leg_imp:"Imprint",leg_priv:"Confidențialitate",leg_agb:"Termeni",cookie_text:"Folosim doar cookie-uri necesare tehnic. Cookie-uri opționale (ex. statistici) doar cu acordul tău.",cookie_link:"Confidențialitate",cookie_accept:"Accept",cookie_decline:"Doar necesare"
+  }
+};
+function setLang(l){
+  const d=I18N[l]||I18N.de;
+  document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(d[k]!=null)e.innerHTML=d[k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(e=>{const k=e.getAttribute('data-i18n-ph');if(d[k]!=null)e.setAttribute('placeholder',d[k]);});
+  document.querySelectorAll('.lang a').forEach(a=>a.classList.toggle('on',a.getAttribute('data-l')===l));
+  document.documentElement.lang=l;
+  try{localStorage.setItem('sf_lang',l);}catch(e){}
+}
+(function(){let s='de';try{s=localStorage.getItem('sf_lang')||'de';}catch(e){}setLang(s);})();
+function cookieChoice(v){try{localStorage.setItem('sf_cookie',v);}catch(e){}var c=document.getElementById('cookie');if(c)c.classList.remove('show');}
+(function(){var ok=null;try{ok=localStorage.getItem('sf_cookie');}catch(e){}if(!ok){var c=document.getElementById('cookie');if(c)c.classList.add('show');}})();
+function sendForm(e){
+  e.preventDefault();
+  const f=e.target,g=n=>f.elements[n]?f.elements[n].value:'';
+  const body=`Name: ${g('name')}%0D%0ATelefon: ${g('tel')}%0D%0AE-Mail: ${g('email')}%0D%0ABereich: ${g('bereich')}%0D%0AOrt: ${g('ort')}%0D%0AVerfügbar ab: ${g('ab')}`;
+  window.location.href=`mailto:schichtfix@gmail.com?subject=Bewerbung%20${encodeURIComponent(g('name'))}&body=${body}`;
+  return false;
+}
+</script>
+</body>
+</html>
