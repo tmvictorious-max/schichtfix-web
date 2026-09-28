@@ -139,6 +139,7 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:520px){form .row{grid-template-columns:1fr}}
 form button{width:100%;margin-top:6px;padding:15px;font-size:16px}
 .form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.form-note.ok{font-size:15px;font-weight:600;color:var(--text,#fff)}.form-note a{color:inherit;text-decoration:underline}
 .chk{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;color:var(--muted);cursor:pointer;line-height:1.45;margin:4px 0 2px}
 .chk input{width:auto;margin-top:2px;accent-color:var(--em);flex:none}
 .chk a{color:var(--em);text-decoration:underline}
@@ -294,6 +295,7 @@ footer ul a:hover{color:var(--em)}
       <div class="contact-item"><div class="ic">💬</div><div><b>WhatsApp</b><span data-i18n="c_wa">Schnellste Antwort</span></div></div>
     </div>
     <form class="card" onsubmit="return sendForm(event)">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="f"><label data-i18n="form_firma">Firma</label><input name="firma" required></div>
       <div class="row">
         <div class="f"><label data-i18n="form_name">Ansprechpartner</label><input name="name" required></div>
@@ -314,7 +316,7 @@ footer ul a:hover{color:var(--em)}
       <div class="f"><label data-i18n="form_msg">Kurz: was &amp; ab wann?</label><textarea name="msg" rows="2"></textarea></div>
       <label class="chk"><input type="checkbox" name="consent" required> <span data-i18n="form_consent">Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span></label>
       <button type="submit" class="btn btn-primary"><span data-i18n="cta_request">Personal anfragen</span> →</button>
-      <div class="form-note" data-i18n="form_note">Absenden öffnet Ihr E-Mail-Programm mit vorausgefüllter Anfrage.</div>
+      <div class="form-note" data-i18n="form_note">Unverbindlich. Wir melden uns innerhalb von 24 Stunden.</div>
     </form>
   </div>
 </section>
@@ -387,7 +389,7 @@ const I18N={
     g_seal:"Erfolgs-Garantie",g_h2:"Sie zahlen nur bei erfolgreicher Vermittlung.",g_p:"Keine Vorabkosten, keine versteckten Gebühren. Kommt keine Vermittlung zustande, entstehen Ihnen keine Kosten. Das Risiko liegt bei uns — nicht bei Ihnen.",g_cta:"Jetzt Personal anfragen",
     f_kick:"Anfrage",f_h2:"Sagen Sie uns, was Sie brauchen",f_p:"Unverbindlich und in 60 Sekunden. Wir melden uns umgehend mit einer konkreten Lösung.",
     c_phone:"Telefon",c_wa:"Schnellste Antwort",
-    form_firma:"Firma",form_name:"Ansprechpartner",form_tel:"Telefon",form_branche:"Branche",form_anzahl:"Anzahl Kräfte",form_msg:"Kurz: was &amp; ab wann?",form_note:"Absenden öffnet Ihr E-Mail-Programm mit vorausgefüllter Anfrage.",form_consent:"Ich habe die <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+    form_firma:"Firma",form_name:"Ansprechpartner",form_tel:"Telefon",form_branche:"Branche",form_anzahl:"Anzahl Kräfte",form_msg:"Kurz: was &amp; ab wann?",form_note:"Unverbindlich. Wir melden uns innerhalb von 24 Stunden.",form_sending:"Wird gesendet …",form_ok:"✓ Danke! Ihre Anfrage ist eingegangen — wir melden uns innerhalb von 24 Stunden.",form_err:"Senden fehlgeschlagen. Bitte schreiben Sie uns direkt an <a href='mailto:schichtfix@gmail.com'>schichtfix@gmail.com</a>.",form_consent:"Ich habe die <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
     opt1:"Lager &amp; Logistik",opt2:"Produktion &amp; Montage",opt3:"Verpackung",opt4:"Umzug &amp; Event",opt5:"Andere",
     foot_tag:"Ihre Personalvermittlung für Lager, Produktion, Logistik und Bau — schnell und erfolgsbasiert.",foot_nav:"Navigation",foot_legal:"Rechtliches",leg_imp:"Impressum",leg_priv:"Datenschutz",leg_agb:"AGB",cookie_text:"Wir verwenden nur technisch notwendige Cookies. Optionale Cookies (z. B. Statistik) nur mit Ihrer Zustimmung.",cookie_link:"Datenschutz",cookie_accept:"Akzeptieren",cookie_decline:"Nur notwendige"
   },
@@ -414,7 +416,7 @@ const I18N={
     g_seal:"Success guarantee",g_h2:"You pay only on successful placement.",g_p:"No upfront costs, no hidden fees. If no placement happens, you pay nothing. The risk is on us — not on you.",g_cta:"Request staff now",
     f_kick:"Request",f_h2:"Tell us what you need",f_p:"Non-binding and in 60 seconds. We'll get back to you right away with a concrete solution.",
     c_phone:"Phone",c_wa:"Fastest response",
-    form_firma:"Company",form_name:"Contact person",form_tel:"Phone",form_branche:"Industry",form_anzahl:"No. of workers",form_msg:"Briefly: what &amp; from when?",form_note:"Submitting opens your email app with a pre-filled request.",form_consent:"I have read the <a href='datenschutz.html' target='_blank'>privacy policy</a> and consent to the processing of my data.",
+    form_firma:"Company",form_name:"Contact person",form_tel:"Phone",form_branche:"Industry",form_anzahl:"No. of workers",form_msg:"Briefly: what &amp; from when?",form_note:"No obligation. We get back to you within 24 hours.",form_sending:"Sending …",form_ok:"✓ Thank you! Your request has been received — we will get back to you within 24 hours.",form_err:"Sending failed. Please email us directly at <a href='mailto:schichtfix@gmail.com'>schichtfix@gmail.com</a>.",form_consent:"I have read the <a href='datenschutz.html' target='_blank'>privacy policy</a> and consent to the processing of my data.",
     opt1:"Warehouse &amp; Logistics",opt2:"Production &amp; Assembly",opt3:"Packaging",opt4:"Moving &amp; Events",opt5:"Other",
     foot_tag:"Your recruitment partner for warehouse, production, logistics and construction — fast and success-based.",foot_nav:"Navigation",foot_legal:"Legal",leg_imp:"Imprint",leg_priv:"Privacy",leg_agb:"Terms",cookie_text:"We use only technically necessary cookies. Optional cookies (e.g. statistics) only with your consent.",cookie_link:"Privacy",cookie_accept:"Accept",cookie_decline:"Only necessary"
   },
@@ -441,7 +443,7 @@ const I18N={
     g_seal:"Гарантия результата",g_h2:"Вы платите только при успешном подборе.",g_p:"Без предоплаты и скрытых комиссий. Если подбор не состоялся — вы не платите ничего. Риск на нас, а не на вас.",g_cta:"Запросить персонал",
     f_kick:"Заявка",f_h2:"Скажите, что вам нужно",f_p:"Без обязательств, за 60 секунд. Мы сразу вернёмся с конкретным решением.",
     c_phone:"Телефон",c_wa:"Самый быстрый ответ",
-    form_firma:"Компания",form_name:"Контактное лицо",form_tel:"Телефон",form_branche:"Отрасль",form_anzahl:"Кол-во работников",form_msg:"Кратко: что и с какого дня?",form_note:"Отправка откроет ваш почтовый клиент с заполненной заявкой.",form_consent:"Я прочитал(а) <a href='datenschutz.html' target='_blank'>политику конфиденциальности</a> и согласен(на) на обработку моих данных.",
+    form_firma:"Компания",form_name:"Контактное лицо",form_tel:"Телефон",form_branche:"Отрасль",form_anzahl:"Кол-во работников",form_msg:"Кратко: что и с какого дня?",form_note:"Без обязательств. Ответим в течение 24 часов.",form_sending:"Отправляем …",form_ok:"✓ Спасибо! Заявка получена — мы свяжемся с вами в течение 24 часов.",form_err:"Не удалось отправить. Напишите нам напрямую: <a href='mailto:schichtfix@gmail.com'>schichtfix@gmail.com</a>.",form_consent:"Я прочитал(а) <a href='datenschutz.html' target='_blank'>политику конфиденциальности</a> и согласен(на) на обработку моих данных.",
     opt1:"Склад и логистика",opt2:"Производство и сборка",opt3:"Упаковка",opt4:"Переезды и мероприятия",opt5:"Другое",
     foot_tag:"Подбор персонала для склада, производства, логистики и стройки — быстро и за результат.",foot_nav:"Навигация",foot_legal:"Правовое",leg_imp:"Импрессум",leg_priv:"Конфиденциальность",leg_agb:"Условия",cookie_text:"Мы используем только технически необходимые cookie. Опциональные (напр. статистика) — только с вашего согласия.",cookie_link:"Конфиденциальность",cookie_accept:"Принять",cookie_decline:"Только необходимые"
   }
@@ -458,9 +460,14 @@ function cookieChoice(v){try{localStorage.setItem('sf_cookie',v);}catch(e){}var 
 (function(){var ok=null;try{ok=localStorage.getItem('sf_cookie');}catch(e){}if(!ok){var c=document.getElementById('cookie');if(c)c.classList.add('show');}})();
 function sendForm(e){
   e.preventDefault();
-  const f=e.target,g=n=>f.elements[n]?f.elements[n].value:'';
-  const body=`Firma: ${g('firma')}%0D%0AAnsprechpartner: ${g('name')}%0D%0ATelefon: ${g('tel')}%0D%0AE-Mail: ${g('email')}%0D%0ABranche: ${g('branche')}%0D%0AAnzahl: ${g('anzahl')}%0D%0ANachricht: ${g('msg')}`;
-  window.location.href=`mailto:schichtfix@gmail.com?subject=Personalanfrage%20${encodeURIComponent(g('firma'))}&body=${body}`;
+  const f=e.target,g=n=>f.elements[n]?f.elements[n].value.trim():'';
+  const L=I18N[document.documentElement.lang]||I18N.de,note=f.querySelector('.form-note'),btn=f.querySelector('button[type=submit]');
+  if(g('_honey'))return false;
+  btn.disabled=true;note.classList.remove('ok');note.textContent=L.form_sending;
+  fetch('https://formsubmit.co/ajax/schichtfix@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({_subject:'[Schichtfix] Personalanfrage — '+g('firma'),_template:'table',_captcha:'false',_replyto:g('email'),Firma:g('firma'),Ansprechpartner:g('name'),Telefon:g('tel'),'E-Mail':g('email'),Branche:g('branche'),'Anzahl Kräfte':g('anzahl'),Nachricht:g('msg'),Sprache:document.documentElement.lang})})
+  .then(r=>r.json()).then(d=>{if(String(d.success)!=='true')throw 0;f.reset();note.removeAttribute('data-i18n');note.innerHTML=L.form_ok;note.classList.add('ok');})
+  .catch(()=>{note.innerHTML=L.form_err;btn.disabled=false;});
   return false;
 }
 </script>
