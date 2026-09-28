@@ -100,6 +100,7 @@ section.blk{padding:70px 0}
 .cta-left h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:16px}
 .cta-left p{font-size:17px;margin-bottom:24px}
 .contact-item{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+a.contact-item{text-decoration:none;color:inherit;cursor:pointer}a.wa-link:hover b{color:#25D366}
 .contact-item .ic{width:46px;height:46px;border-radius:12px;background:var(--em-l);color:var(--em);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
 .contact-item b{color:var(--ink);font-family:'Manrope';display:block;font-size:15px}
 .contact-item span{font-size:13.5px;color:var(--muted)}
@@ -247,7 +248,7 @@ footer ul a:hover{color:var(--em)}
       <h2 data-i18n="f_h2">Jetzt in 60 Sekunden bewerben</h2>
       <p data-i18n="f_p">Kein Lebenslauf nötig. Fülle einfach das Formular aus — wir melden uns bei dir. Kostenlos und unverbindlich.</p>
       <div class="contact-item"><div class="ic">✉️</div><div><b>E-Mail</b><span>schichtfix@gmail.com</span></div></div>
-      <div class="contact-item"><div class="ic">💬</div><div><b>WhatsApp</b><span data-i18n="c_wa">Schnellste Antwort</span></div></div>
+      <a class="contact-item wa-link" href="https://wa.me/4915170562319?text=Hallo%20Schichtfix%2C%20ich%20suche%20Arbeit." target="_blank" rel="noopener"><div class="ic">💬</div><div><b>WhatsApp</b><span data-i18n="c_wa">Schnellste Antwort</span></div></a>
       <div class="contact-item"><div class="ic">🌍</div><div><b data-i18n="c_lang_b">Sprache</b><span data-i18n="c_lang_s">DE · EN · RU · UA · RO</span></div></div>
     </div>
     <form class="card" action="https://formsubmit.co/schichtfix@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="return sendForm(event)">
