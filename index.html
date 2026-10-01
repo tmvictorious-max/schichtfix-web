@@ -110,6 +110,7 @@ section.blk{padding:76px 0}
 .ind .ic{font-size:32px;margin-bottom:12px}
 .ind b{font-family:'Manrope';color:var(--ink);font-size:16px;display:block;margin-bottom:4px}
 .ind span{font-size:13px;color:var(--muted)}
+.ind-more{text-align:center;margin-top:22px;color:var(--muted)}
 
 .guarantee{background:linear-gradient(135deg,#16294c,#123a5e);color:var(--ink);border-radius:26px;padding:52px 44px;text-align:center;position:relative;overflow:hidden;border:1px solid var(--line)}
 .guarantee::before{content:"";position:absolute;top:-60px;right:-60px;width:260px;height:260px;background:rgba(245,131,31,.18);border-radius:50%}
@@ -220,7 +221,7 @@ footer ul a:hover{color:var(--em)}
 
 <section class="stats">
   <div class="wrap stats-grid">
-    <div class="stat"><div class="n"><em>5</em></div><div class="l" data-i18n="stat1_l">Branchen — Lager, Produktion, Logistik, Umzug &amp; Bau</div></div>
+    <div class="stat"><div class="n"><em>18</em></div><div class="l" data-i18n="stat1_l">Bereiche — vom Helfer bis zur Fachkraft</div></div>
     <div class="stat"><div class="n"><em>0 €</em></div><div class="l" data-i18n="stat2_l">Vorabkosten — Sie zahlen nur bei Erfolg</div></div>
     <div class="stat"><div class="n"><em>100%</em></div><div class="l" data-i18n="stat3_l">Geprüfte &amp; zuverlässige Kräfte</div></div>
   </div>
@@ -268,7 +269,21 @@ footer ul a:hover{color:var(--em)}
       <div class="ind"><div class="ic">📮</div><b data-i18n="i3_b">Verpackung</b><span data-i18n="i3_s">Verpacken, Etikettieren</span></div>
       <div class="ind"><div class="ic">🚚</div><b data-i18n="i4_b">Umzug &amp; Event</b><span data-i18n="i4_s">Auf- und Abbau, Transport</span></div>
       <div class="ind"><div class="ic">🏗️</div><b data-i18n="i5_b">Bau &amp; Handwerk</b><span data-i18n="i5_s">Bauhelfer, Renovierung</span></div>
+      <div class="ind"><div class="ic">🧹</div><b data-i18n="opt7">Reinigung</b><span data-i18n="ix7_s">Gebäude, Büros, Hotels</span></div>
+      <div class="ind"><div class="ic">🍽️</div><b data-i18n="opt8">Gastronomie &amp; Hotel</b><span data-i18n="ix8_s">Küche, Service, Zimmer</span></div>
+      <div class="ind"><div class="ic">🩺</div><b data-i18n="opt9">Pflege &amp; Betreuung</b><span data-i18n="ix9_s">Pflegehelfer, Betreuung</span></div>
+      <div class="ind"><div class="ic">🚛</div><b data-i18n="opt10">Fahrer (B / C / CE)</b><span data-i18n="ix10_s">Kurier, Lkw, Stapler</span></div>
+      <div class="ind"><div class="ic">⚡</div><b data-i18n="opt11">Elektrik &amp; Technik</b><span data-i18n="ix11_s">Elektriker, Mechatroniker</span></div>
+      <div class="ind"><div class="ic">🔩</div><b data-i18n="opt12">Metall &amp; Schweißen</b><span data-i18n="ix12_s">Schweißer, Schlosser, CNC</span></div>
+      <div class="ind"><div class="ic">🎨</div><b data-i18n="opt13">Handwerk (Maler, Sanitär, Tischler …)</b><span data-i18n="ix13_s">Maler, Sanitär, Tischler</span></div>
+      <div class="ind"><div class="ic">🌾</div><b data-i18n="opt14">Landwirtschaft &amp; Saison</b><span data-i18n="ix14_s">Ernte, Gärtnerei, Saison</span></div>
+      <div class="ind"><div class="ic">🛒</div><b data-i18n="opt15">Verkauf &amp; Einzelhandel</b><span data-i18n="ix15_s">Verkauf, Kasse, Regale</span></div>
+      <div class="ind"><div class="ic">🛡️</div><b data-i18n="opt16">Sicherheit &amp; Wachdienst</b><span data-i18n="ix16_s">Objektschutz, Empfang</span></div>
+      <div class="ind"><div class="ic">💼</div><b data-i18n="opt17">Büro &amp; Verwaltung</b><span data-i18n="ix17_s">Büro, Buchhaltung, Empfang</span></div>
+      <div class="ind"><div class="ic">💻</div><b data-i18n="opt18">IT &amp; Digital</b><span data-i18n="ix18_s">Entwicklung, Support, Marketing</span></div>
+      <div class="ind"><div class="ic">🎓</div><b data-i18n="ix19_b">Fachkräfte &amp; Berufe</b><span data-i18n="ix19_s">Mit Ausbildung – nennen Sie uns den Beruf</span></div>
     </div>
+    <p class="ind-more" data-i18n="ind_more">Ihr Beruf ist nicht dabei? Fragen Sie trotzdem – wir suchen auch Spezialisten.</p>
   </div>
 </section>
 
@@ -389,7 +404,7 @@ const I18N={
     hero_cta2:"So funktioniert's",trust1:"Erfolgsbasiert",trust2:"Keine Vorabkosten",trust3:"Geprüfte Kräfte",
     hc_title:"Anfrage in 60 Sekunden",hc_sub:"Sie sagen uns was Sie brauchen — wir besetzen.",
     hc1_b:"1. Bedarf melden",hc1_s:"Wie viele Kräfte, wo, ab wann",hc2_b:"2. Wir vermitteln",hc2_s:"Passende Helfer aus unserem Pool",hc3_b:"3. Schicht läuft",hc3_s:"Sie zahlen nur bei Erfolg",
-    stat1_l:"Branchen — Lager, Produktion, Logistik, Umzug &amp; Bau",stat2_l:"Vorabkosten — Sie zahlen nur bei Erfolg",stat3_l:"Geprüfte &amp; zuverlässige Kräfte",
+    stat1_l:"Bereiche — vom Helfer bis zur Fachkraft",stat2_l:"Vorabkosten — Sie zahlen nur bei Erfolg",stat3_l:"Geprüfte &amp; zuverlässige Kräfte",
     how_kick:"So funktioniert's",how_h2:"In drei Schritten zu voll besetzten Schichten",how_p:"Kein Papierkram, kein Risiko. Sie melden den Bedarf — wir liefern die Leute.",
     step1_h:"Bedarf melden",step1_p:"Sagen Sie uns, wie viele Helfer Sie brauchen, an welchem Standort und ab wann. Ein Anruf oder ein Formular genügt.",
     step2_h:"Wir vermitteln",step2_p:"Wir wählen passende, geprüfte Kräfte aus unserem Pool und koordinieren alles für Sie.",
@@ -399,7 +414,7 @@ const I18N={
     b2_h:"Kein Risiko",b2_p:"Erfolgsbasiert: keine Vorabkosten. Sie zahlen nur bei erfolgreicher Vermittlung.",
     b3_h:"Immer verfügbar",b3_p:"Zuverlässige, motivierte Kräfte — geprüft, zuverlässig und sofort einsatzbereit.",
     b4_h:"Rundum betreut",b4_p:"Wir kümmern uns um Auswahl, Koordination und Nachbesetzung. Sie konzentrieren sich aufs Geschäft.",
-    ind_kick:"Branchen",ind_h2:"Helfer für Ihre Branche",
+    ind_kick:"Branchen",ind_h2:"Personal für Ihre Branche",ix7_s:"Gebäude, Büros, Hotels",ix8_s:"Küche, Service, Zimmer",ix9_s:"Pflegehelfer, Betreuung",ix10_s:"Kurier, Lkw, Stapler",ix11_s:"Elektriker, Mechatroniker",ix12_s:"Schweißer, Schlosser, CNC",ix13_s:"Maler, Sanitär, Tischler",ix14_s:"Ernte, Gärtnerei, Saison",ix15_s:"Verkauf, Kasse, Regale",ix16_s:"Objektschutz, Empfang",ix17_s:"Büro, Buchhaltung, Empfang",ix18_s:"Entwicklung, Support, Marketing",ix19_s:"Mit Ausbildung – nennen Sie uns den Beruf",ix19_b:"Fachkräfte &amp; Berufe",ind_more:"Ihr Beruf ist nicht dabei? Fragen Sie trotzdem – wir suchen auch Spezialisten.",
     i1_b:"Lager &amp; Logistik",i1_s:"Kommissionierung, Verladung",i2_b:"Produktion &amp; Montage",i2_s:"Fließband, Fertigung",i3_b:"Verpackung",i3_s:"Verpacken, Etikettieren",i4_b:"Umzug &amp; Event",i4_s:"Auf- und Abbau, Transport",i5_b:"Bau &amp; Handwerk",i5_s:"Bauhelfer, Renovierung",
     g_seal:"Erfolgs-Garantie",g_h2:"Sie zahlen nur bei erfolgreicher Vermittlung.",g_p:"Keine Vorabkosten, keine versteckten Gebühren. Kommt keine Vermittlung zustande, entstehen Ihnen keine Kosten. Das Risiko liegt bei uns — nicht bei Ihnen.",g_cta:"Jetzt Personal anfragen",
     f_kick:"Anfrage",f_h2:"Sagen Sie uns, was Sie brauchen",f_p:"Unverbindlich und in 60 Sekunden. Wir melden uns umgehend mit einer konkreten Lösung.",
@@ -416,7 +431,7 @@ const I18N={
     hero_cta2:"How it works",trust1:"Success-based",trust2:"No upfront costs",trust3:"Vetted workers",
     hc_title:"Request in 60 seconds",hc_sub:"Tell us what you need — we staff it.",
     hc1_b:"1. Tell us your need",hc1_s:"How many workers, where, from when",hc2_b:"2. We place them",hc2_s:"Matching workers from our pool",hc3_b:"3. Shift runs",hc3_s:"You pay only on success",
-    stat1_l:"Industries — warehouse, production, logistics, moving &amp; construction",stat2_l:"Upfront cost — you pay only on success",stat3_l:"Vetted &amp; reliable workers",
+    stat1_l:"Areas — from helpers to skilled workers",stat2_l:"Upfront cost — you pay only on success",stat3_l:"Vetted &amp; reliable workers",
     how_kick:"How it works",how_h2:"Fully staffed shifts in three steps",how_p:"No paperwork, no risk. You report the need — we deliver the people.",
     step1_h:"Report your need",step1_p:"Tell us how many workers you need, at which site and from when. One call or form is enough.",
     step2_h:"We place them",step2_p:"We select matching, vetted workers from our pool and coordinate everything for you.",
@@ -426,7 +441,7 @@ const I18N={
     b2_h:"No risk",b2_p:"Success-based: no upfront costs. You pay only on successful placement.",
     b3_h:"Always available",b3_p:"Reliable, motivated workers — vetted and ready to start.",
     b4_h:"Fully managed",b4_p:"We handle selection, coordination and replacements. You focus on your business.",
-    ind_kick:"Industries",ind_h2:"Workers for your industry",
+    ind_kick:"Industries",ind_h2:"Staff for your industry",ix7_s:"Buildings, offices, hotels",ix8_s:"Kitchen, service, housekeeping",ix9_s:"Care assistants, support",ix10_s:"Courier, truck, forklift",ix11_s:"Electricians, mechatronics",ix12_s:"Welders, fitters, CNC",ix13_s:"Painters, plumbers, joiners",ix14_s:"Harvest, nurseries, seasonal",ix15_s:"Sales, checkout, shelves",ix16_s:"Site security, reception",ix17_s:"Office, bookkeeping, reception",ix18_s:"Development, support, marketing",ix19_s:"Qualified – tell us the profession",ix19_b:"Skilled workers &amp; trades",ind_more:"Your profession isn't listed? Ask anyway – we also find specialists.",
     i1_b:"Warehouse &amp; Logistics",i1_s:"Picking, loading",i2_b:"Production &amp; Assembly",i2_s:"Assembly line, manufacturing",i3_b:"Packaging",i3_s:"Packing, labelling",i4_b:"Moving &amp; Events",i4_s:"Setup, teardown, transport",i5_b:"Construction &amp; Trades",i5_s:"Construction helpers, renovation",
     g_seal:"Success guarantee",g_h2:"You pay only on successful placement.",g_p:"No upfront costs, no hidden fees. If no placement happens, you pay nothing. The risk is on us — not on you.",g_cta:"Request staff now",
     f_kick:"Request",f_h2:"Tell us what you need",f_p:"Non-binding and in 60 seconds. We'll get back to you right away with a concrete solution.",
@@ -443,7 +458,7 @@ const I18N={
     hero_cta2:"Как это работает",trust1:"Оплата за результат",trust2:"Без предоплаты",trust3:"Проверенные работники",
     hc_title:"Заявка за 60 секунд",hc_sub:"Скажите, что нужно — мы закроем.",
     hc1_b:"1. Оставьте заявку",hc1_s:"Сколько людей, где, с какого дня",hc2_b:"2. Мы подбираем",hc2_s:"Подходящие работники из нашего пула",hc3_b:"3. Смена работает",hc3_s:"Платите только за результат",
-    stat1_l:"Отраслей — склад, производство, логистика, переезды и стройка",stat2_l:"Предоплата — платите только за результат",stat3_l:"Проверенные, надёжные работники",
+    stat1_l:"Направлений — от помощника до специалиста",stat2_l:"Предоплата — платите только за результат",stat3_l:"Проверенные, надёжные работники",
     how_kick:"Как это работает",how_h2:"Полностью закрытые смены за три шага",how_p:"Без бумажной волокиты и риска. Вы оставляете заявку — мы даём людей.",
     step1_h:"Оставьте заявку",step1_p:"Скажите, сколько работников нужно, на какой объект и с какого дня. Достаточно звонка или формы.",
     step2_h:"Мы подбираем",step2_p:"Подбираем подходящих проверенных работников из нашего пула и всё координируем за вас.",
@@ -453,7 +468,7 @@ const I18N={
     b2_h:"Без риска",b2_p:"Оплата за результат: без предоплаты. Платите только когда работник на месте.",
     b3_h:"Всегда доступны",b3_p:"Надёжные, мотивированные работники — проверенные и готовые к выходу.",
     b4_h:"Полное сопровождение",b4_p:"Берём на себя подбор, координацию и замену. Вы занимаетесь бизнесом.",
-    ind_kick:"Отрасли",ind_h2:"Работники для вашей отрасли",
+    ind_kick:"Отрасли",ind_h2:"Персонал для вашей отрасли",ix7_s:"Здания, офисы, отели",ix8_s:"Кухня, сервис, номера",ix9_s:"Помощники по уходу",ix10_s:"Курьеры, грузовики, погрузчик",ix11_s:"Электрики, мехатроники",ix12_s:"Сварщики, слесари, ЧПУ",ix13_s:"Маляры, сантехники, столяры",ix14_s:"Урожай, теплицы, сезон",ix15_s:"Продажи, касса, выкладка",ix16_s:"Охрана объектов, ресепшн",ix17_s:"Офис, бухгалтерия, ресепшн",ix18_s:"Разработка, поддержка, маркетинг",ix19_s:"С образованием – назовите профессию",ix19_b:"Специалисты и профессии",ind_more:"Нужной профессии нет в списке? Всё равно спросите – мы ищем и специалистов.",
     i1_b:"Склад и логистика",i1_s:"Комплектация, погрузка",i2_b:"Производство и сборка",i2_s:"Конвейер, изготовление",i3_b:"Упаковка",i3_s:"Упаковка, маркировка",i4_b:"Переезды и мероприятия",i4_s:"Монтаж, демонтаж, транспорт",i5_b:"Стройка и ремонт",i5_s:"Разнорабочие, ремонт",
     g_seal:"Гарантия результата",g_h2:"Вы платите только при успешном подборе.",g_p:"Без предоплаты и скрытых комиссий. Если подбор не состоялся — вы не платите ничего. Риск на нас, а не на вас.",g_cta:"Запросить персонал",
     f_kick:"Заявка",f_h2:"Скажите, что вам нужно",f_p:"Без обязательств, за 60 секунд. Мы сразу вернёмся с конкретным решением.",
