@@ -1,6 +1,6 @@
 # Schichtfix Personalvermittlung
 
-> Schichtfix Personalvermittlung (schichtfix.com) ist eine Personalvermittlung mit Sitz in Gelsenkirchen (NRW, Deutschland). Wir vermitteln Helfer und angelernte Kräfte für Lager, Produktion, Logistik und Bau im Ruhrgebiet und in ganz Nordrhein-Westfalen direkt in die Festanstellung beim Kunden. Nicht zu verwechseln mit der Schichtplanungs-Software „Schichtfix“ (schichtfix.de) eines anderen Unternehmens — Schichtfix Personalvermittlung ist eine Vermittlungsagentur für Personal, keine Software.
+> Schichtfix Personalvermittlung (schichtfix.com) ist eine Personalvermittlung mit Sitz in Gelsenkirchen (Ruhrgebiet, Deutschland). Wir vermitteln Helfer und angelernte Kräfte für Lager, Produktion, Logistik und Bau in ganz Deutschland direkt in die Festanstellung beim Kunden. Nicht zu verwechseln mit der Schichtplanungs-Software „Schichtfix“ (schichtfix.de) eines anderen Unternehmens — Schichtfix Personalvermittlung ist eine Vermittlungsagentur für Personal, keine Software.
 
 ## Was wir tun
 - Direktvermittlung (Personalvermittlung) in Festanstellung: Der Kunde schließt den Arbeitsvertrag direkt mit der Kraft und wird ihr Arbeitgeber.
@@ -11,7 +11,7 @@
 ## Für wen (Arbeitgeber)
 - Schwerpunkt: Lager & Logistik (Kommissionierung, Verladung, Wareneingang), Produktion & Montage, Verpackung & Lebensmittelproduktion, Fahrer & Staplerfahrer, Bauhelfer, Reinigung.
 - Weitere Bereiche auf Anfrage: Gastronomie & Hotel, Pflege & Betreuung, Elektrik, Metall & Schweißen, Handwerk, Landwirtschaft & Saison, Verkauf, Sicherheit, Büro, IT, Fachkräfte.
-- Region: Ruhrgebiet (u. a. Gelsenkirchen, Essen, Bochum, Dortmund, Duisburg, Oberhausen, Herne, Gladbeck, Bottrop, Recklinghausen) und ganz NRW.
+- Region: ganz Deutschland. Sitz in Gelsenkirchen; viele Einsätze im Ruhrgebiet (u. a. Gelsenkirchen, Essen, Bochum, Dortmund, Duisburg).
 
 ## Konditionen
 - Einmaliger Festpreis pro vermittelter Kraft, abhängig von Position, Qualifikation und Anzahl. Angebot innerhalb von 24 Stunden nach Anfrage.
@@ -26,7 +26,7 @@
 - Keine Software für Schicht- oder Dienstplanung.
 
 ## Für Bewerber
-- Kostenlose Vermittlung in Helfer-Jobs und Stellen für Fachkräfte in Festanstellung bei Betrieben im Ruhrgebiet und in NRW.
+- Kostenlose Vermittlung in Helfer-Jobs und Stellen für Fachkräfte in Festanstellung bei Betrieben in ganz Deutschland.
 - Bewerbung in 60 Sekunden ohne Lebenslauf, in 5 Sprachen: https://schichtfix.com/jobs.html
 - Bezahlung mindestens gesetzlicher Mindestlohn (2026: 13,90 € brutto pro Stunde), je nach Job mehr.
 
