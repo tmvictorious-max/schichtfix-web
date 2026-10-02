@@ -39,7 +39,12 @@
 
 ## Seiten
 - [Startseite für Arbeitgeber](https://schichtfix.com/): Modell, Kosten, Garantien, FAQ, Anfrageformular
-- [Jobs für Bewerber](https://schichtfix.com/jobs.html): Bewerbung in DE, EN, RU, UA, RO
+- [Jobs für Bewerber](https://schichtfix.com/jobs.html): Bewerbung auf Deutsch; weitere Sprachen: [EN](https://schichtfix.com/en/jobs.html), [RU](https://schichtfix.com/ru/jobs.html), [UA](https://schichtfix.com/uk/jobs.html), [RO](https://schichtfix.com/ro/jobs.html)
+- Startseite auf Englisch: https://schichtfix.com/en/ · auf Russisch: https://schichtfix.com/ru/
+- [Lagerhelfer Gelsenkirchen](https://schichtfix.com/lagerhelfer-gelsenkirchen.html)
+- [Lagerhelfer Duisburg](https://schichtfix.com/lagerhelfer-duisburg.html)
+- [Personal Logistik Dortmund](https://schichtfix.com/personal-logistik-dortmund.html)
+- [Produktionshelfer Bochum](https://schichtfix.com/produktionshelfer-bochum.html)
 - [AGB](https://schichtfix.com/agb.html): Vergütung, Fälligkeit, Ersatzgarantie
 - [Impressum](https://schichtfix.com/impressum.html)
 - [Datenschutz](https://schichtfix.com/datenschutz.html)
