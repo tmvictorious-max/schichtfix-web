@@ -99,6 +99,8 @@
  ]
 }
 </script>
+<link rel="preload" href="../fonts/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/manrope-latin-cf48e3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../fonts/fonts.css">
 <style>
 :root{
@@ -155,7 +157,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(10,17,34,.82);backdrop-f
 
 .hero-card{background:linear-gradient(180deg,var(--panel),#142440);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:26px;position:relative;overflow:hidden}
 .hero-card::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:var(--em-l);border-radius:50%}
-.hero-card h3{font-size:19px;font-weight:800;margin-bottom:4px;position:relative}
+.hero-card h3,.hero-card .hc-h{font-size:19px;font-weight:800;margin-bottom:4px;position:relative}
 .hero-card .sub{font-size:13.5px;color:var(--muted);margin-bottom:18px;position:relative}
 .hc-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);position:relative}
 .hc-row:last-child{border-bottom:none}
@@ -232,7 +234,7 @@ footer{background:#0a1428;color:var(--muted);padding:52px 0 28px;border-top:1px 
 @media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:24px}}
 footer .logo{color:var(--ink);margin-bottom:12px}
 footer p.tag{font-size:14px;color:var(--muted);max-width:300px}
-footer h4{font-family:'Manrope';color:var(--ink);font-size:14px;margin-bottom:14px;font-weight:700}
+footer h4,footer .fh{font-family:'Manrope';color:var(--ink);font-size:14px;margin-bottom:14px;font-weight:700}
 footer ul{list-style:none}
 footer ul li{margin-bottom:10px}
 footer ul a{font-size:14px;color:var(--muted);cursor:pointer}
@@ -250,7 +252,7 @@ footer ul a:hover{color:var(--em)}
 .cookie .crow .btn{padding:10px 18px;font-size:14px}
 @media(max-width:860px){.cookie{bottom:86px}}
 </style>
-<script src="../track.js"></script>
+<script src="../track.js" defer></script>
 </head>
 <body>
 
@@ -294,7 +296,7 @@ footer ul a:hover{color:var(--em)}
       </div>
     </div>
     <div class="hero-card">
-      <h3 data-i18n="hc_title">Aplici în 60 de secunde</h3>
+      <h2 class="hc-h" data-i18n="hc_title">Aplici în 60 de secunde</h2>
       <p class="sub" data-i18n="hc_sub">Fără CV. Doar completezi formularul.</p>
       <div class="hc-row"><div class="hc-ic"><svg class="i"><use href="../icons.svg#i-clipboard-list"/></svg></div><div><b data-i18n="hc1_b">1. Completează formularul</b><span data-i18n="hc1_s">Nume, contact, ce vrei să faci</span></div></div>
       <div class="hc-row"><div class="hc-ic"><svg class="i"><use href="../icons.svg#i-phone"/></svg></div><div><b data-i18n="hc2_b">2. Te contactăm</b><span data-i18n="hc2_s">Găsim jobul potrivit pentru tine</span></div></div>
@@ -449,7 +451,7 @@ footer ul a:hover{color:var(--em)}
         <p class="tag" data-i18n="foot_tag">Tura ta — ocupată rapid. Joburi de ajutor în depozit, producție, logistică și construcții.</p>
       </div>
       <div>
-        <h4 data-i18n="foot_nav">Navigare</h4>
+        <h3 class="fh" data-i18n="foot_nav">Navigare</h3>
         <ul>
           <li><a href="#vorteile" data-i18n="nav_why">Avantajele tale</a></li>
           <li><a href="#ablauf" data-i18n="nav_how">Cum funcționează</a></li>
@@ -458,7 +460,7 @@ footer ul a:hover{color:var(--em)}
         </ul>
       </div>
       <div>
-        <h4 data-i18n="foot_legal">Legal</h4>
+        <h3 class="fh" data-i18n="foot_legal">Legal</h3>
         <ul>
           <li><a href="../impressum.html" data-i18n="leg_imp">Imprint</a></li>
           <li><a href="../datenschutz.html" data-i18n="leg_priv">Confidențialitate</a></li>
