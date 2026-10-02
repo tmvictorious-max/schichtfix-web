@@ -1,6 +1,6 @@
 /* Schichtfix: consent-based analytics (GA4, Consent Mode v2) + click/form events + traffic source.
    GA is loaded only after "Akzeptieren". To activate, put the GA4 measurement ID below (e.g. "G-XXXXXXX"). */
-var SF_GA_ID = "";
+var SF_GA_ID = "G-SW59PD5XMG";
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
