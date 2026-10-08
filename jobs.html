@@ -251,6 +251,8 @@ footer ul a:hover{color:var(--em)}
 .cookie .crow{display:flex;gap:10px;flex-wrap:wrap}
 .cookie .crow .btn{padding:10px 18px;font-size:14px}
 @media(max-width:860px){.cookie{bottom:86px}}
+@media(max-width:640px){.hero .lead,.hero .hero-cta{display:none}.hero form.card{margin-top:4px}}
+#bewerben{scroll-margin-top:80px}
 </style>
 <script src="track.js" defer></script>
 </head>
@@ -295,13 +297,46 @@ footer ul a:hover{color:var(--em)}
         <span><svg class="i ic"><use href="icons.svg#i-check"/></svg> <span data-i18n="trust3">Festanstellung beim Betrieb</span></span>
       </div>
     </div>
-    <div class="hero-card">
-      <h2 class="hc-h" data-i18n="hc_title">Bewerbung in 60 Sekunden</h2>
-      <p class="sub" data-i18n="hc_sub">Kein Lebenslauf nötig. Einfach Formular ausfüllen.</p>
-      <div class="hc-row"><div class="hc-ic"><svg class="i"><use href="icons.svg#i-clipboard-list"/></svg></div><div><b data-i18n="hc1_b">1. Formular ausfüllen</b><span data-i18n="hc1_s">Name, Kontakt, was du machen willst</span></div></div>
-      <div class="hc-row"><div class="hc-ic"><svg class="i"><use href="icons.svg#i-phone"/></svg></div><div><b data-i18n="hc2_b">2. Wir melden uns</b><span data-i18n="hc2_s">Wir finden den passenden Job für dich</span></div></div>
-      <div class="hc-row"><div class="hc-ic"><svg class="i"><use href="icons.svg#i-rocket"/></svg></div><div><b data-i18n="hc3_b">3. Du startest</b><span data-i18n="hc3_s">Schneller Einstieg, faire Bezahlung</span></div></div>
-    </div>
+    <form class="card" id="bewerben" novalidate action="https://formsubmit.co/schichtfix@gmail.com" method="POST" onsubmit="return sendForm(event)">
+      <input type="hidden" name="_subject" value="[Schichtfix] Bewerbung">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://schichtfix.com/jobs.html?sent=1#bewerben">
+      <input type="hidden" name="Sprache" value="de">
+      <input type="hidden" name="Quelle" value="">
+      <input type="hidden" name="_autoresponse" value="">
+      <div style="display:none" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+      <div class="f"><label for="jf-name" data-i18n="form_name">Name</label><input id="jf-name" name="Name" autocomplete="name"></div>
+      <div class="row">
+        <div class="f"><label for="jf-ort" data-i18n="form_ort">Ort / PLZ</label><input id="jf-ort" name="Ort" autocomplete="off" placeholder="45889"></div>
+        <div class="f"><label for="jf-bereich" data-i18n="form_bereich">Bereich</label>
+          <select id="jf-bereich" name="Bereich">
+            <option data-i18n="opt1">Lager &amp; Logistik</option>
+            <option data-i18n="opt2">Produktion &amp; Montage</option>
+            <option data-i18n="opt3">Verpackung</option>
+            <option data-i18n="opt4">Umzug &amp; Event</option>
+            <option data-i18n="opt5">Bau &amp; Handwerk</option>
+            <option data-i18n="opt8">Reinigung</option>
+            <option data-i18n="opt9">Gastronomie & Hotel</option>
+            <option data-i18n="opt10">Pflege & Betreuung</option>
+            <option data-i18n="opt11">Fahrer (B / C / CE)</option>
+            <option data-i18n="opt12">Elektrik & Technik</option>
+            <option data-i18n="opt13">Metall & Schweißen</option>
+            <option data-i18n="opt14">Handwerk (Maler, Sanitär, Tischler …)</option>
+            <option data-i18n="opt15">Landwirtschaft & Saisonarbeit</option>
+            <option data-i18n="opt16">Verkauf & Einzelhandel</option>
+            <option data-i18n="opt17">Sicherheit & Wachdienst</option>
+            <option data-i18n="opt18">Büro & Verwaltung</option>
+            <option data-i18n="opt19">IT & Digital</option>
+            <option data-i18n="opt7">Fachkraft / anderer Beruf</option>
+            <option data-i18n="opt6">Egal / alles</option>
+          </select></div>
+      </div>
+      <div class="f"><label for="jf-tel" data-i18n="form_tel">Telefon</label><input id="jf-tel" type="tel" inputmode="tel" name="Telefon" autocomplete="tel"></div>
+      <small class="cv-hint" style="display:block;margin:4px 0 12px" data-i18n="form_privacy">Datenverarbeitung gemäß unserer <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a>.</small>
+      <button type="submit" class="btn btn-primary"><span data-i18n="cta_apply">Jetzt bewerben</span> →</button>
+      <div class="form-note" data-i18n="form_note">Kostenlos für dich. Wir melden uns innerhalb von 24 Stunden.</div>
+    </form>
   </div>
 </section>
 
@@ -380,59 +415,7 @@ footer ul a:hover{color:var(--em)}
   </div>
 </section>
 
-<section class="blk" id="bewerben">
-  <div class="wrap cta-grid">
-    <div class="cta-left">
-      <div class="kick" data-i18n="f_kick">Bewerbung</div>
-      <h2 data-i18n="f_h2">Jetzt in 60 Sekunden bewerben</h2>
-      <p data-i18n="f_p">Kein Lebenslauf nötig. Fülle einfach das Formular aus — wir melden uns bei dir. Kostenlos und unverbindlich.</p>
-      <a class="contact-item" href="mailto:schichtfix@gmail.com"><div class="ic"><svg class="i"><use href="icons.svg#i-mail"/></svg></div><div><b>E-Mail</b><span>schichtfix@gmail.com</span></div></a>
-      <a class="contact-item" href="tel:+4915170562319"><div class="ic"><svg class="i"><use href="icons.svg#i-phone"/></svg></div><div><b data-i18n="c_phone">Telefon</b><span>+49 151 70562319</span></div></a>
-      <a class="contact-item wa-link" href="https://wa.me/4915170562319?text=Hallo%20Schichtfix%2C%20ich%20suche%20Arbeit." target="_blank" rel="noopener"><div class="ic"><svg class="i"><use href="icons.svg#i-message-circle"/></svg></div><div><b>WhatsApp</b><span data-i18n="c_wa">Schnellste Antwort</span></div></a>
-      <div class="contact-item"><div class="ic"><svg class="i"><use href="icons.svg#i-globe"/></svg></div><div><b data-i18n="c_lang_b">Sprache</b><span data-i18n="c_lang_s">DE · EN · RU · UA · RO</span></div></div>
-    </div>
-    <form class="card" novalidate action="https://formsubmit.co/schichtfix@gmail.com" method="POST" onsubmit="return sendForm(event)">
-      <input type="hidden" name="_subject" value="[Schichtfix] Bewerbung">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://schichtfix.com/jobs.html?sent=1#bewerben">
-      <input type="hidden" name="Sprache" value="de">
-      <input type="hidden" name="Quelle" value="">
-      <input type="hidden" name="_autoresponse" value="">
-      <div style="display:none" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
-      <div class="f"><label for="jf-name" data-i18n="form_name">Name</label><input id="jf-name" name="Name" autocomplete="name"></div>
-      <div class="row">
-        <div class="f"><label for="jf-ort" data-i18n="form_ort">Ort / PLZ</label><input id="jf-ort" name="Ort" autocomplete="off" placeholder="45889"></div>
-        <div class="f"><label for="jf-bereich" data-i18n="form_bereich">Bereich</label>
-          <select id="jf-bereich" name="Bereich">
-            <option data-i18n="opt1">Lager &amp; Logistik</option>
-            <option data-i18n="opt2">Produktion &amp; Montage</option>
-            <option data-i18n="opt3">Verpackung</option>
-            <option data-i18n="opt4">Umzug &amp; Event</option>
-            <option data-i18n="opt5">Bau &amp; Handwerk</option>
-            <option data-i18n="opt8">Reinigung</option>
-            <option data-i18n="opt9">Gastronomie & Hotel</option>
-            <option data-i18n="opt10">Pflege & Betreuung</option>
-            <option data-i18n="opt11">Fahrer (B / C / CE)</option>
-            <option data-i18n="opt12">Elektrik & Technik</option>
-            <option data-i18n="opt13">Metall & Schweißen</option>
-            <option data-i18n="opt14">Handwerk (Maler, Sanitär, Tischler …)</option>
-            <option data-i18n="opt15">Landwirtschaft & Saisonarbeit</option>
-            <option data-i18n="opt16">Verkauf & Einzelhandel</option>
-            <option data-i18n="opt17">Sicherheit & Wachdienst</option>
-            <option data-i18n="opt18">Büro & Verwaltung</option>
-            <option data-i18n="opt19">IT & Digital</option>
-            <option data-i18n="opt7">Fachkraft / anderer Beruf</option>
-            <option data-i18n="opt6">Egal / alles</option>
-          </select></div>
-      </div>
-      <div class="f"><label for="jf-tel" data-i18n="form_tel">Telefon</label><input id="jf-tel" type="tel" inputmode="tel" name="Telefon" autocomplete="tel"></div>
-      <small class="cv-hint" style="display:block;margin:4px 0 12px" data-i18n="form_privacy">Datenverarbeitung gemäß unserer <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a>.</small>
-      <button type="submit" class="btn btn-primary"><span data-i18n="cta_apply">Jetzt bewerben</span> →</button>
-      <div class="form-note" data-i18n="form_note">Kostenlos für dich. Wir melden uns innerhalb von 24 Stunden.</div>
-    </form>
-  </div>
-</section>
+
 
 <footer>
   <div class="wrap">
