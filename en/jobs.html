@@ -391,7 +391,7 @@ footer ul a:hover{color:var(--em)}
       <a class="contact-item wa-link" href="https://wa.me/4915170562319?text=Hallo%20Schichtfix%2C%20ich%20suche%20Arbeit." target="_blank" rel="noopener"><div class="ic"><svg class="i"><use href="../icons.svg#i-message-circle"/></svg></div><div><b>WhatsApp</b><span data-i18n="c_wa">Fastest response</span></div></a>
       <div class="contact-item"><div class="ic"><svg class="i"><use href="../icons.svg#i-globe"/></svg></div><div><b data-i18n="c_lang_b">Language</b><span data-i18n="c_lang_s">DE · EN · RU · UA · RO</span></div></div>
     </div>
-    <form class="card" action="https://formsubmit.co/schichtfix@gmail.com" method="POST" onsubmit="return sendForm(event)">
+    <form class="card" novalidate action="https://formsubmit.co/schichtfix@gmail.com" method="POST" onsubmit="return sendForm(event)">
       <input type="hidden" name="_subject" value="[Schichtfix] Bewerbung">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -400,9 +400,9 @@ footer ul a:hover{color:var(--em)}
       <input type="hidden" name="Quelle" value="">
       <input type="hidden" name="_autoresponse" value="">
       <div style="display:none" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
-      <div class="f"><label for="jf-name" data-i18n="form_name">Name</label><input id="jf-name" name="Name" autocomplete="name" required></div>
+      <div class="f"><label for="jf-name" data-i18n="form_name">Name</label><input id="jf-name" name="Name" autocomplete="name"></div>
       <div class="row">
-        <div class="f"><label for="jf-tel" data-i18n="form_tel">Phone</label><input id="jf-tel" type="tel" inputmode="tel" name="Telefon" autocomplete="tel" required></div>
+        <div class="f"><label for="jf-tel" data-i18n="form_tel">Phone</label><input id="jf-tel" type="tel" inputmode="tel" name="Telefon" autocomplete="tel"></div>
         <div class="f"><label for="jf-email">E-Mail</label><input id="jf-email" type="email" name="email" autocomplete="email"></div>
       </div>
       <div class="row">
@@ -436,7 +436,7 @@ footer ul a:hover{color:var(--em)}
         <select id="jf-de" name="Deutsch"><option>0 / keine</option><option>A1</option><option selected>A2</option><option>B1</option><option>B2+</option></select></div>
       <div class="f"><label data-i18n="form_cv">CV</label><a class="cv-btn" href="https://wa.me/4915170562319" target="_blank" rel="noopener"><svg class="i"><use href="../icons.svg#i-file-text"/></svg> <span data-i18n="form_cv_btn">Send CV via WhatsApp</span></a><small class="cv-hint" data-i18n="form_cv_hint">Optional – just send a photo or PDF via WhatsApp</small></div>
       <label class="chk"><input type="checkbox" name="Anonymes Profil an Arbeitgeber" value="Ja"> <span data-i18n="form_share">I agree that Schichtfix may show my profile without name and contact details (area, town, availability, German level) to interested employers. You can withdraw at any time.</span></label>
-      <label class="chk"><input type="checkbox" required> <span data-i18n="form_consent">I have read the <a href='../datenschutz.html' target='_blank'>privacy policy</a> and consent to the processing of my data.</span></label>
+      <label class="chk"><input type="checkbox"> <span data-i18n="form_consent">I have read the <a href='../datenschutz.html' target='_blank'>privacy policy</a> and consent to the processing of my data.</span></label>
       <button type="submit" class="btn btn-primary"><span data-i18n="cta_apply">Apply now</span> →</button>
       <div class="form-note" data-i18n="form_note">Free for you. We get back to you within 24 hours.</div>
     </form>

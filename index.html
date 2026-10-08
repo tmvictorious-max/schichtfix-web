@@ -596,12 +596,12 @@ footer ul a:hover{color:var(--em)}
       <a class="contact-item" href="mailto:schichtfix@gmail.com"><div class="ic"><svg class="i"><use href="icons.svg#i-mail"/></svg></div><div><b>E-Mail</b><span>schichtfix@gmail.com</span></div></a>
       <a class="contact-item wa-link" href="https://whatsapp.com/channel/0029VbE0GpaEQIaqHRHlvc2x" target="_blank" rel="noopener"><div class="ic"><svg class="i"><use href="icons.svg#i-megaphone"/></svg></div><div><b data-i18n="c_ch">Kandidaten-Updates</b><span data-i18n="c_ch_s">WhatsApp-Kanal: jede Woche verfügbare Kräfte</span></div></a>
     </div>
-    <form class="card" onsubmit="return sendForm(event)">
+    <form class="card" novalidate onsubmit="return sendForm(event)">
       <div style="display:none" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
-      <div class="f"><label for="ff-firma" data-i18n="form_firma">Firma</label><input id="ff-firma" name="firma" autocomplete="organization" required></div>
+      <div class="f"><label for="ff-firma" data-i18n="form_firma">Firma</label><input id="ff-firma" name="firma" autocomplete="organization"></div>
       <div class="row">
-        <div class="f"><label for="ff-name" data-i18n="form_name">Ansprechpartner</label><input id="ff-name" name="name" autocomplete="name" required></div>
-        <div class="f"><label for="ff-tel" data-i18n="form_tel">Telefon / WhatsApp</label><input id="ff-tel" type="tel" name="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div class="f"><label for="ff-name" data-i18n="form_name">Ansprechpartner</label><input id="ff-name" name="name" autocomplete="name"></div>
+        <div class="f"><label for="ff-tel" data-i18n="form_tel">Telefon / WhatsApp</label><input id="ff-tel" type="tel" name="tel" autocomplete="tel" inputmode="tel"></div>
       </div>
       <div class="f"><label for="ff-email"><span>E-Mail</span> <small data-i18n="form_opt">(optional)</small></label><input id="ff-email" type="email" name="email" autocomplete="email"></div>
       <div class="row">
@@ -622,7 +622,7 @@ footer ul a:hover{color:var(--em)}
         <div class="f"><label for="ff-ort" data-i18n="form_ort">Einsatzort (PLZ / Ort)</label><input id="ff-ort" name="ort" autocomplete="postal-code" placeholder="45889 Gelsenkirchen"></div>
       </div>
       <div class="f"><label for="ff-msg"><span data-i18n="form_msg">Tätigkeit, Schichten, Deutschniveau</span> <small data-i18n="form_opt">(optional)</small></label><textarea id="ff-msg" name="msg" rows="2"></textarea></div>
-      <label class="chk"><input type="checkbox" name="consent" required> <span data-i18n="form_consent">Ich habe die <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span></label>
+      <label class="chk"><input type="checkbox" name="consent"> <span data-i18n="form_consent">Ich habe die <a href='datenschutz.html' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span></label>
       <button type="submit" class="btn btn-primary"><span data-i18n="cta_request">Personal anfragen</span> →</button>
       <div class="form-note" data-i18n="form_note">Unverbindlich. Wir rufen Sie innerhalb von 24 Stunden zurück.</div>
     </form>
