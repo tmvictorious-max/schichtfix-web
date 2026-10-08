@@ -627,7 +627,7 @@ function cvPicked(i){const n=i.closest('.f').querySelector('.cv-name');n.textCon
 function sendForm(e){
   const f=e.target,g=n=>f.elements[n]?f.elements[n].value.trim():'';
   const L=I18N[document.documentElement.lang]||I18N.de,note=f.querySelector('.form-note'),btn=f.querySelector('button[type=submit]'),cv=f.elements['attachment'];
-  if(g('_honey')){e.preventDefault();return false;}
+  if(f.elements['_honey'])f.elements['_honey'].value='';
   if(cv&&cv.files[0]&&cv.files[0].size>5*1024*1024){e.preventDefault();note.classList.remove('ok');note.textContent=L.form_cv_big;return false;}
   f.elements['_subject'].value='[Schichtfix] Bewerbung — '+g('Name');
   f.elements['Sprache'].value=document.documentElement.lang;
@@ -635,6 +635,7 @@ function sendForm(e){
   if(f.elements['Quelle']&&typeof sfSourceText==='function')f.elements['Quelle'].value=sfSourceText();
   if(typeof sfTrack==='function')sfTrack('form_submit',{form:'candidate'});
   btn.disabled=true;note.classList.remove('ok');note.textContent=L.form_sending;
+  setTimeout(function(){if(typeof sfFormFail==='function')sfFormFail(note);},45000);
   return true;
 }
 (function(){
@@ -644,6 +645,32 @@ function sendForm(e){
   note.removeAttribute('data-i18n');note.innerHTML=L.form_ok;note.classList.add('ok');
   try{history.replaceState(null,'',location.pathname+'#bewerben');}catch(e){}
   sec.scrollIntoView();
+})();
+
+/* Formular-Sicherheitsnetz: Entwurf nur im Tab (sessionStorage) + WhatsApp-Ausweg */
+(function(){
+  var f=document.querySelector('form.card');if(!f)return;
+  var job=!f.elements['firma'],KEY='sf_draft_'+location.pathname,lang=document.documentElement.lang;
+  var T={de:job?['Klappt das Senden nicht? Schick deine Angaben per WhatsApp','Das Senden hat nicht geklappt. Deine Angaben sind gespeichert – schick sie mit einem Klick per WhatsApp:','Per WhatsApp senden']
+             :['Klappt das Senden nicht? Angaben per WhatsApp schicken','Das Senden hat nicht geklappt. Ihre Angaben sind gespeichert – schicken Sie sie mit einem Klick per WhatsApp:','Per WhatsApp senden'],
+    en:["Can't send the form? Send your details via WhatsApp","Sending failed. Your details are saved – send them with one tap via WhatsApp:","Send via WhatsApp"],
+    ru:['Не получается отправить? Отправьте данные в WhatsApp','Не удалось отправить. Ваши данные сохранены — отправьте их в WhatsApp одним нажатием:','Отправить в WhatsApp'],
+    uk:['Не вдається надіслати? Надішліть дані у WhatsApp','Не вдалося надіслати. Ваші дані збережено — надішліть їх у WhatsApp одним натисканням:','Надіслати у WhatsApp'],
+    ro:['Nu se trimite formularul? Trimite datele pe WhatsApp','Trimiterea a eșuat. Datele tale sunt salvate – trimite-le pe WhatsApp cu un singur clic:','Trimite pe WhatsApp']}[lang]||null;
+  if(!T)T=['Klappt das Senden nicht? Angaben per WhatsApp schicken','Das Senden hat nicht geklappt. Ihre Angaben sind gespeichert – schicken Sie sie mit einem Klick per WhatsApp:','Per WhatsApp senden'];
+  function own(el){return el.name&&el.name[0]!=='_'&&el.type!=='file'&&el.type!=='hidden'&&el.type!=='submit';}
+  function waUrl(){var out=['[Schichtfix] '+(job?'Bewerbung':'Personalanfrage')];
+    [].forEach.call(f.elements,function(el){if(!own(el))return;if(el.type==='checkbox'){if(el.checked)out.push(el.name+': ✓');return;}var v=(el.value||'').trim();if(v)out.push(el.name+': '+v);});
+    return 'https://wa.me/4915170562319?text='+encodeURIComponent(out.join('\n'));}
+  function save(){try{var d={};[].forEach.call(f.elements,function(el){if(own(el))d[el.name]=el.type==='checkbox'?el.checked:el.value;});sessionStorage.setItem(KEY,JSON.stringify(d));}catch(e){}}
+  try{if(/[?&]sent=1/.test(location.search))sessionStorage.removeItem(KEY);
+    else{var d=JSON.parse(sessionStorage.getItem(KEY)||'null');if(d)Object.keys(d).forEach(function(k){var el=f.elements[k];if(el&&own(el)){if(el.type==='checkbox')el.checked=!!d[k];else if(!el.value)el.value=d[k];}});}}catch(e){}
+  f.addEventListener('input',save);f.addEventListener('change',save);
+  var p=document.createElement('p');p.className='form-alt';p.style.cssText='margin-top:10px;font-size:13px;text-align:center;opacity:.8';
+  var a=document.createElement('a');a.target='_blank';a.rel='noopener';a.href='https://wa.me/4915170562319';a.textContent=T[0];
+  a.addEventListener('click',function(){this.href=waUrl();});p.appendChild(a);f.appendChild(p);
+  window.sfFormFail=function(note){note.removeAttribute('data-i18n');note.classList.remove('ok');note.innerHTML=T[1]+' <a target="_blank" rel="noopener" style="font-weight:700;text-decoration:underline" href="../'+waUrl()+'">'+T[2]+'</a>';var b=f.querySelector('button[type=submit]');if(b)b.disabled=false;};
+  window.sfFormDone=function(){try{sessionStorage.removeItem(KEY);}catch(e){}};
 })();
 </script>
 </body>
