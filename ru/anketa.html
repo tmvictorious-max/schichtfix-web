@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Анкета кандидата — Schichtfix</title>
+<meta name="description" content="Мини-анкета для работы в Германии: 2 минуты, ответ сразу в WhatsApp Schichtfix. Для соискателей бесплатно.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0f1c36">
+<meta property="og:title" content="Работа в Германии — анкета за 2 минуты">
+<meta property="og:description" content="Производство, склад, стройка и не только. Официальное трудоустройство напрямую у работодателя. Для вас бесплатно.">
+<meta property="og:image" content="https://schichtfix.com/og-image.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/inter-cyrillic-4ee8fc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+:root{
+  --em:#f5831f; --em-d:#d96f10; --em-l:rgba(245,131,31,.14);
+  --ink:#f3f7ff; --body:#c3d0e8; --muted:#8a9bbe;
+  --bg:#0f1c36; --bg2:#152442; --panel:#1b2c4e; --line:#2d3d60;
+  --wa:#25d366; --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,Segoe UI,sans-serif;color:var(--body);background:var(--bg);line-height:1.5;font-size:16px;min-height:100vh}
+h1,h2,.h{font-family:'Manrope',sans-serif;color:var(--ink);line-height:1.15;letter-spacing:-.02em}
+a{color:var(--em)}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-family:'Manrope';font-weight:800;font-size:21px;color:var(--ink);text-decoration:none;letter-spacing:-.03em}
+.logo span{color:var(--em)}
+.free{font-size:12px;font-weight:700;font-family:'Manrope';color:var(--em);background:var(--em-l);padding:6px 12px;border-radius:100px}
+.hero{padding:28px 0 8px}
+.hero h1{font-size:clamp(26px,6vw,34px);margin-bottom:10px}
+.hero p{color:var(--body)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pills span{font-size:13px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:6px 12px}
+.progress{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 10px}
+.bar{height:6px;background:var(--panel);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--em);transition:width .25s}
+.progress small{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+form{padding:4px 0 40px}
+.q{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;margin-bottom:14px}
+.q.err{border-color:#ff6b6b}
+.q h2{font-size:17px;margin-bottom:4px;display:flex;gap:10px;align-items:baseline}
+.q h2 b{font-size:13px;color:var(--em);min-width:22px}
+.q .hint{font-size:13px;color:var(--muted);margin:0 0 12px 32px}
+.q .body{margin-left:32px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:100px;background:var(--bg2);color:var(--ink);font-size:15px;transition:.15s;user-select:none}
+.chips input:checked+span{background:var(--em);border-color:var(--em);color:#04140f;font-weight:600}
+.chips input:focus-visible+span{outline:2px solid var(--em);outline-offset:2px}
+input[type=text],input[type=tel],input[type=number],textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;font-family:inherit;color:var(--ink);background:var(--bg2)}
+input:focus,textarea:focus{outline:none;border-color:var(--em)}
+textarea{min-height:84px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row+.row,.body>input+input,.chips+input{margin-top:10px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--body);margin:6px 0 18px}
+.consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--em)}
+.send{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--wa);color:#04140f;border:none;border-radius:100px;padding:16px 22px;font-family:'Manrope';font-weight:800;font-size:17px;cursor:pointer}
+.send:hover{filter:brightness(1.06)}
+.send svg{width:22px;height:22px}
+.note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.msg{display:none;font-size:14px;color:#ff8f8f;text-align:center;margin-top:10px}
+.done{display:none;text-align:center;padding:40px 0 60px}
+.done h2{font-size:24px;margin-bottom:10px}
+.done .send{max-width:360px;margin:20px auto 0;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:20px 0 32px;font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media (max-width:420px){.q .hint,.q .body{margin-left:0}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="../ru/">Schicht<span>fix</span></a><span class="free">Для вас бесплатно</span></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Работа в Германии: анкета за 2 минуты</h1>
+    <p>Ответьте на 10 коротких вопросов. Анкета придёт к нам в WhatsApp, и мы предложим вам подходящие вакансии.</p>
+    <div class="pills"><span>Официальный договор</span><span>Напрямую у работодателя</span><span>Без комиссии для вас</span></div>
+  </section>
+
+  <div class="progress" aria-hidden="true"><div class="bar"><i id="bar"></i></div><small id="ptext">0 из 10</small></div>
+
+  <form id="f" novalidate>
+    <div class="q" data-req>
+      <h2><b>1</b>Как вас зовут и сколько вам лет?</h2>
+      <div class="body row">
+        <input type="text" name="Имя" placeholder="Имя" autocomplete="given-name">
+        <input type="number" name="Возраст" placeholder="Возраст" inputmode="numeric" min="16" max="70">
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>2</b>Где вы сейчас живёте?</h2>
+      <div class="body row">
+        <input type="text" name="Страна" placeholder="Страна">
+        <input type="text" name="Город" placeholder="Город">
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>3</b>Можете ли вы официально работать в Германии?</h2>
+      <p class="hint">Мы работаем только с кандидатами с паспортом ЕС, §24 или разрешением на работу. Номера документов не нужны.</p>
+      <div class="body chips">
+        <label><input type="radio" name="Право на работу" value="Паспорт ЕС"><span>Паспорт ЕС</span></label>
+        <label><input type="radio" name="Право на работу" value="§24 (Украина)"><span>§24 / защита (Украина)</span></label>
+        <label><input type="radio" name="Право на работу" value="Разрешение на работу (ВНЖ)"><span>Разрешение на работу (ВНЖ)</span></label>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>4</b>Какой у вас немецкий?</h2>
+      <div class="body chips">
+        <label><input type="radio" name="Немецкий" value="0"><span>Не знаю</span></label>
+        <label><input type="radio" name="Немецкий" value="A1"><span>A1</span></label>
+        <label><input type="radio" name="Немецкий" value="A2"><span>A2</span></label>
+        <label><input type="radio" name="Немецкий" value="B1"><span>B1</span></label>
+        <label><input type="radio" name="Немецкий" value="B2+"><span>B2 и выше</span></label>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>5</b>Какую работу ищете?</h2>
+      <p class="hint">Можно выбрать несколько.</p>
+      <div class="body chips">
+        <label><input type="checkbox" name="Работа" value="Склад и логистика"><span>Склад и логистика</span></label>
+        <label><input type="checkbox" name="Работа" value="Производство и сборка"><span>Производство и сборка</span></label>
+        <label><input type="checkbox" name="Работа" value="Упаковка"><span>Упаковка</span></label>
+        <label><input type="checkbox" name="Работа" value="Стройка / бетон / ЖБИ"><span>Стройка / бетон / ЖБИ</span></label>
+        <label><input type="checkbox" name="Работа" value="Стройка и ремонт"><span>Стройка и ремонт</span></label>
+        <label><input type="checkbox" name="Работа" value="Металл и сварка"><span>Металл и сварка</span></label>
+        <label><input type="checkbox" name="Работа" value="Электрика и техника"><span>Электрика и техника</span></label>
+        <label><input type="checkbox" name="Работа" value="Ремёсла: маляр, сантехник…"><span>Ремёсла: маляр, сантехник…</span></label>
+        <label><input type="checkbox" name="Работа" value="Водитель (B / C / CE)"><span>Водитель (B / C / CE)</span></label>
+        <label><input type="checkbox" name="Работа" value="Переезды и мероприятия"><span>Переезды и мероприятия</span></label>
+        <label><input type="checkbox" name="Работа" value="Уборка и клининг"><span>Уборка и клининг</span></label>
+        <label><input type="checkbox" name="Работа" value="Гастрономия и отели"><span>Гастрономия и отели</span></label>
+        <label><input type="checkbox" name="Работа" value="Уход и медицина"><span>Уход и медицина</span></label>
+        <label><input type="checkbox" name="Работа" value="Сельское хозяйство / сезон"><span>Сельское хозяйство / сезон</span></label>
+        <label><input type="checkbox" name="Работа" value="Продажи и магазины"><span>Продажи и магазины</span></label>
+        <label><input type="checkbox" name="Работа" value="Охрана"><span>Охрана</span></label>
+        <label><input type="checkbox" name="Работа" value="Офис и администрирование"><span>Офис и администрирование</span></label>
+        <label><input type="checkbox" name="Работа" value="IT и digital"><span>IT и digital</span></label>
+        <label><input type="checkbox" name="Работа" value="Другая профессия"><span>Другая профессия</span></label>
+        <label><input type="checkbox" name="Работа" value="Любая работа"><span>Любая работа</span></label>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>6</b>Ваш опыт работы</h2>
+      <p class="hint">Кем и сколько лет работали. Например: «арматурщик 3 года, склад 1 год».</p>
+      <div class="body"><textarea name="Опыт" placeholder="Профессия, где работали, сколько лет"></textarea></div>
+    </div>
+
+    <div class="q">
+      <h2><b>7</b>Есть ли удостоверения и права?</h2>
+      <p class="hint">Можно выбрать несколько.</p>
+      <div class="body chips">
+        <label><input type="checkbox" name="Удостоверения" value="Погрузчик"><span>Погрузчик</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Кран / стропальщик"><span>Кран / стропальщик</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Сварщик"><span>Сварщик</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Права B"><span>Права B</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Права C/CE"><span>Права C / CE</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Своя машина"><span>Есть машина</span></label>
+        <label><input type="checkbox" name="Удостоверения" value="Нет"><span>Нет</span></label>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>8</b>Готовы к сменам и переезду?</h2>
+      <div class="body">
+        <div class="chips">
+          <label><input type="checkbox" name="Смены" value="Только день"><span>Только день</span></label>
+          <label><input type="checkbox" name="Смены" value="2 смены"><span>2 смены</span></label>
+          <label><input type="checkbox" name="Смены" value="3 смены / ночь"><span>3 смены / ночь</span></label>
+          <label><input type="checkbox" name="Смены" value="Выходные"><span>Выходные</span></label>
+        </div>
+        <div class="chips" style="margin-top:10px">
+          <label><input type="radio" name="Переезд" value="Вся Германия"><span>Поеду в любой город</span></label>
+          <label><input type="radio" name="Переезд" value="Только рядом с домом"><span>Только рядом с домом</span></label>
+          <label><input type="radio" name="Переезд" value="Нужно жильё"><span>Нужно жильё</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>9</b>Когда можете начать?</h2>
+      <div class="body chips">
+        <label><input type="radio" name="Старт" value="Сразу"><span>Сразу</span></label>
+        <label><input type="radio" name="Старт" value="Через 1–2 недели"><span>Через 1–2 недели</span></label>
+        <label><input type="radio" name="Старт" value="Через месяц"><span>Через месяц</span></label>
+        <label><input type="radio" name="Старт" value="Позже"><span>Позже</span></label>
+      </div>
+    </div>
+
+    <div class="q" data-req>
+      <h2><b>10</b>Ваш номер WhatsApp / телефон</h2>
+      <div class="body"><input type="tel" name="Телефон" placeholder="+49 …" autocomplete="tel" inputmode="tel"></div>
+    </div>
+
+    <label class="consent"><input type="checkbox" id="c1"><span>Согласен(на), чтобы Schichtfix использовал мои данные для подбора работы. Я знаю, что могу отозвать согласие в любой момент. <a href="../datenschutz.html" target="_blank" rel="noopener">Datenschutz</a></span></label>
+    <label class="consent"><input type="checkbox" id="c2"><span>Можно показывать мой профиль работодателям анонимно, без имени и контактов (по желанию).</span></label>
+
+    <button class="send" type="submit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.3Z"/></svg>Отправить в WhatsApp</button>
+    <p class="msg" id="msg">Заполните, пожалуйста, отмеченные вопросы и поставьте первую галочку.</p>
+    <p class="note">Откроется WhatsApp с готовым сообщением. Просто нажмите «Отправить».</p>
+  </form>
+
+  <section class="done" id="done">
+    <h2>Спасибо! Почти готово</h2>
+    <p>Если WhatsApp не открылся или вы не нажали «Отправить», нажмите кнопку ниже. Мы ответим в течение рабочего дня.</p>
+    <a class="send" id="again" href="#">Открыть WhatsApp ещё раз</a>
+  </section>
+</main>
+
+<footer><div class="wrap">Schichtfix · Personalvermittlung · Gelsenkirchen · <a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a></div></footer>
+
+<script>
+(function(){
+  const WA='4915170562319', f=document.getElementById('f'), qs=[...f.querySelectorAll('.q')];
+  const KEY='sf_anketa_ru';
+  const filled=q=>[...q.querySelectorAll('input,textarea')].some(el=>(el.type==='radio'||el.type==='checkbox')?el.checked:el.value.trim()!=='');
+  const reqOk=q=>{
+    const t=[...q.querySelectorAll('input[type=text],input[type=tel],input[type=number],textarea')];
+    if(t.length) return t.every(el=>el.value.trim()!=='') && (!q.querySelector('.chips')||filled(q));
+    return filled(q);
+  };
+  function progress(){
+    const n=qs.filter(filled).length;
+    document.getElementById('bar').style.width=(n*10)+'%';
+    document.getElementById('ptext').textContent=n+' из 10';
+  }
+  function collect(){
+    const d={};
+    new FormData(f).forEach((v,k)=>{v=String(v).trim(); if(!v) return; d[k]=d[k]?d[k]+', '+v:v;});
+    return d;
+  }
+  // draft in sessionStorage (optional convenience)
+  try{const s=JSON.parse(sessionStorage.getItem(KEY)||'{}');
+    Object.entries(s).forEach(([k,v])=>{String(v).split(', ').forEach(val=>{
+      f.querySelectorAll('[name="'+k+'"]').forEach(el=>{
+        if(el.type==='radio'||el.type==='checkbox'){if(el.value===val) el.checked=true;}
+        else el.value=v;});});});
+  }catch(e){}
+  f.addEventListener('input',()=>{progress(); qs.forEach(q=>{if(reqOk(q)) q.classList.remove('err');});
+    try{sessionStorage.setItem(KEY,JSON.stringify(collect()));}catch(e){}});
+  progress();
+
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    const bad=qs.filter(q=>q.hasAttribute('data-req')&&!reqOk(q));
+    qs.forEach(q=>q.classList.toggle('err',bad.includes(q)));
+    const c1=document.getElementById('c1').checked;
+    if(bad.length||!c1){document.getElementById('msg').style.display='block';(bad[0]||document.getElementById('c1')).scrollIntoView({behavior:'smooth',block:'center'});return;}
+    document.getElementById('msg').style.display='none';
+    const d=collect();
+    d['Анонимный профиль']=document.getElementById('c2').checked?'да':'нет';
+    const order=['Имя','Возраст','Страна','Город','Право на работу','Немецкий','Работа','Опыт','Удостоверения','Смены','Переезд','Старт','Телефон','Анонимный профиль'];
+    const lines=['Здравствуйте! Анкета кандидата (schichtfix.com):',''];
+    order.forEach(k=>{if(d[k]) lines.push(k+': '+d[k]);});
+    const url='https://wa.me/'+WA+'?text='+encodeURIComponent(lines.join('\n'));
+    // e-mail copy (does not block WhatsApp)
+    try{
+      const body=Object.assign({_subject:'[Schichtfix] Анкета RU — '+(d['Имя']||''),_template:'table',_captcha:'false'},d);
+      fetch('https://formsubmit.co/ajax/schichtfix@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body),keepalive:true}).catch(()=>{});
+    }catch(err){}
+    try{sessionStorage.removeItem(KEY);}catch(err){}
+    document.getElementById('again').href=url;
+    f.style.display='none';document.querySelector('.progress').style.display='none';
+    document.getElementById('done').style.display='block';window.scrollTo(0,0);
+    window.location.href=url;
+  });
+})();
+</script>
+</body>
+</html>
