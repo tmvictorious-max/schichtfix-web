@@ -280,7 +280,6 @@ footer a{color:var(--muted)}
     // e-mail copy (does not block WhatsApp)
     try{
       const body=Object.assign({_subject:'[Schichtfix] Анкета RU — '+(d['Имя']||''),_template:'table',_captcha:'false'},d);
-      fetch('https://formsubmit.co/ajax/schichtfix@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body),keepalive:true}).catch(()=>{});
     }catch(err){}
     try{sessionStorage.removeItem(KEY);}catch(err){}
     document.getElementById('again').href=url;
